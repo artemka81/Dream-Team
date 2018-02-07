@@ -1,6 +1,6 @@
 var gulp = require('gulp');
 var browserSync = require('browser-sync').create();
-var less = require('gulp-less');
+var scss = require('gulp-sass');
 var pug = require('gulp-pug');
 var plumber = require('gulp-plumber');
 var notify = require('gulp-notify');
@@ -37,7 +37,7 @@ gulp.task('server', function() {
 		gulp.start('pug');
 	});
 
-	watch('./app/less/**/*.less', function(){
+	watch('./app/scss/**/*.scss', function(){
 		gulp.start('styles');
 	});
 
@@ -54,7 +54,7 @@ gulp.task('server:docs', function() {
 });
 
 gulp.task('styles', function() {
-	return gulp.src('./app/less/**/*.less')
+	return gulp.src('./app/scss/**/*.scss')
 	.pipe(plumber({
 		errorHandler: notify.onError(function(err){
 			return {
@@ -64,7 +64,7 @@ gulp.task('styles', function() {
 		})
 	}))
 	.pipe(sourcemaps.init())
-	.pipe(less())
+	.pipe(scss())
 	.pipe(autoprefixer({
 		browsers: ['last 6 versions'],
 		cascade: false
