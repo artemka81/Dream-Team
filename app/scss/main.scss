@@ -1,7 +1,8 @@
-@color: #222;
+$color: #222;
 
 body {
-	color: @color;
+	color: $color;
+	
 }
 
 h1 {
