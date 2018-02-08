@@ -2,15 +2,25 @@ $white: #FFF;
 $red: #FFF;
 $blue: #FFF;
 $yellow: #FFF;
+$light-blue: #dde8ee;
 
 
 .button {
 	display: inline-block;
-	padding: 15px 30px;
+	padding: 0 30px;
 	margin: 10px;
-	border: 1px solid;
+	border: 1px solid $light-blue;
 	border-radius: 25px;
 	background-color: $white;
+	color: #037EC6;
+	text-decoration: none;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 2;
+	
+	&:hover, &:focus { background: $light-blue; }
+
+	&:active { background: #b4dff6; }	
 }
 
 .button-white {
