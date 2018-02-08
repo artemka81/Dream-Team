@@ -33,7 +33,7 @@ $light-blue: #dde8ee;
 	background-color: $white;
 }
  
-.button-red {
+.button-delete {
 	color: $white;
 	background-color: $red;
 	padding: 10px 20px;
@@ -42,7 +42,7 @@ $light-blue: #dde8ee;
 	&:active { background: #990101; }
 }
  
-.button-blue {
+.button-save {
 	color: $white;
 	background-color: $blue;
 	border: none;
@@ -50,7 +50,7 @@ $light-blue: #dde8ee;
 	&:active { background: #0069a7; }
 }
  
-.button-yellow {
+.button-edit {
 	color: $white;
 	background-color: $yellow;
 	padding: 10px 20px;
@@ -61,14 +61,10 @@ $light-blue: #dde8ee;
  
 .button-arrow {
 	background-color: $white;
-	position: relative;
-	.small-arrow-right {
-		font-size: 10px;
-		font-weight: 100;
-	}	
+	position: relative;	
 }
  
-.button-shadow {
+.button-login {
 	border: none;
 	box-shadow: 0px 6px 16px rgba(23, 50, 66, 0.75);
 	&:hover, &:focus { 
@@ -80,4 +76,9 @@ $light-blue: #dde8ee;
 		color: #FFF;
 		box-shadow: none;
 	}
+}
+
+.button__small-fa-icon {
+	font-size: 10px;
+	font-weight: 100;
 }
