@@ -88,6 +88,10 @@
         mail
     </title>
     <path class="cls-1" d="M0 0v8l32 16L64 8V0H0zm0 16v32h64V16L32 32z"/>
+</symbol><symbol id="plane" viewBox="0 0 32 33">
+    <text x="-16" font-family="FontAwesome" font-size="32" transform="translate(16.002 27.43)">
+        &#xF1D9;
+    </text>
 </symbol><symbol id="rain" viewBox="0 0 64 64">
     
     <title>

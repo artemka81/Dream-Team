@@ -1,0 +1,35 @@
+$color-header-text: #fff;
+$color-header-desc: #81C5EE;
+
+.header-user {
+	width: 100%;
+	padding: 43px;
+	height: 200px;
+	background-image: url('../img/bg/bg_header.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.header-user__logo-brand {
+	display: flex;
+}
+.header-user__logo{
+	fill: #fff;
+	svg{
+		width: 32px;
+		height: 32px;
+	}
+}
+.header-user__brand{
+	margin-left: 20px;
+}
+.header-user__brandname{
+	h1{
+		padding: 0;
+		margin: 0;
+		color: $color-header-text;
+	}
+}
+.header-user__brand-desc{
+	color: $color-header-desc;
+}

@@ -1,0 +1,19 @@
+extends layouts/ui-layout.pug
+include modules/nav.pug
+
+block variables
+	- var title = 'Шапка user'
+	- var pageClass = 'ui-header-user'
+
+block content
+	.header-user
+		.header-user__logo-brand
+			.header-user__logo
+				+icon('plane', 'plane-mod')
+			.header-user__brand
+				.header-user__brandname
+					h1 Digital lyfestyle
+				.header-user__brand-desc
+					p Сайт IT спейиалиста
+		.header-user__login
+		+nav-main("header-user__nav")
