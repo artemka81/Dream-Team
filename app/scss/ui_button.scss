@@ -1,26 +1,32 @@
 $white: #FFF;
-$red: #FFF;
-$blue: #FFF;
-$yellow: #FFF;
+$red: #b51919;
+$blue: #037ec6;
+$yellow: #ffba00;
 $light-blue: #dde8ee;
 
 
 .button {
+	font-size: 16px;
+	font-weight: 600;
+	transition: 0.2s ease-in;
 	display: inline-block;
-	padding: 0 30px;
+	padding: 10px 30px;
 	margin: 10px;
-	border: 1px solid $light-blue;
+	border: 2px solid $light-blue;
 	border-radius: 25px;
 	background-color: $white;
 	color: #037EC6;
 	text-decoration: none;
-	font-weight: 700;
-	font-size: 16px;
-	line-height: 2;
 	
-	&:hover, &:focus { background: $light-blue; }
+	&:hover, &:focus { 
+		background: $light-blue; 
+		cursor: pointer;
+	}
 
-	&:active { background: #b4dff6; }	
+	&:active { 
+		background: #b4dff6; 
+		cursor: none;
+	}	
 }
 
 .button-white {
@@ -28,21 +34,50 @@ $light-blue: #dde8ee;
 }
  
 .button-red {
+	color: $white;
 	background-color: $red;
+	padding: 10px 20px;
+	border: none;
+	&:hover, &:focus { background: #e70c0c; }
+	&:active { background: #990101; }
 }
  
 .button-blue {
+	color: $white;
 	background-color: $blue;
+	border: none;
+	&:hover, &:focus { background: #0094eb; }
+	&:active { background: #0069a7; }
 }
  
 .button-yellow {
+	color: $white;
 	background-color: $yellow;
+	padding: 10px 20px;
+	border: none;
+	&:hover, &:focus { background: #ffcf3e; }
+	&:active { background: #f29a00; }
 }
  
 .button-arrow {
-	background-color: $white;	
+	background-color: $white;
+	position: relative;
+	.small-arrow-right {
+		font-size: 10px;
+		font-weight: 100;
+	}	
 }
  
 .button-shadow {
-
+	border: none;
+	box-shadow: 0px 6px 16px rgba(23, 50, 66, 0.75);
+	&:hover, &:focus { 
+		background: #037ec6; 
+		color: #FFF;
+	}
+	&:active { 
+		background: #006ba9; 
+		color: #FFF;
+		box-shadow: none;
+	}
 }

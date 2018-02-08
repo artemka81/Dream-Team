@@ -5,9 +5,19 @@ block variables
 	- var pageClass = 'index-page'
 
 block content
-	+button('arrow','Вперед','#')
-	+button('white','Подробнее','#')
-	+button('yellow','Редактировать','#')
-	+button('red','Удалить','#')
-	+button('blue','Сохранить','#')
-	+button('shadow','Войти','#')
+	p
+		+button('arrow','Вперед ','#')
+	p
+		+button('white','Подробнее','#')
+	p
+		+button('yellow','Редактировать','#')
+	p
+		+button('red','Удалить','#')
+	p
+		+button('blue','Сохранить','#')
+	p
+		+button('shadow','Войти','#')
+
+
+block scripts
+	script(defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js")
