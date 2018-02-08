@@ -4,9 +4,7 @@ mixin icon(name,mod)
 		use(xlink:href="img/sprite.svg#" + name)
 
 mixin button(mod,title,link_adress)
-	if mod == 'arrow'
-		a(class="button button-" + mod, href=link_adress) #{title} 
+	a(class="button button-" + mod, href=link_adress) #{title} 
+		if mod == 'arrow'
 			span.small-arrow-right
 				i.fas.fa-arrow-right
-	else
-		a(class="button button-" + mod, href=link_adress) #{title}
