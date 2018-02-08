@@ -1,13 +1,7 @@
-
-/* base styles */
-
-
-
 /* variable */
 @import 'variable/variable';
 
 /* blocks styles */
 @import 'base/fonts_style';
 
-
-
+@import "ui_button.scss";

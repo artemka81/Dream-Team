@@ -2,3 +2,10 @@ mixin icon(name,mod)
 	- mod = mod || ''
 	svg(class="icon icon-" + name + ' ' + mod)
 		use(xlink:href="img/sprite.svg#" + name)
+
+mixin button(title,link,mod,icon)
+	- mod = mod || 'regular'
+	a(class="button button-" + mod, href=link) #{title} 
+		if icon
+			span.button__small-fa-icon
+				i(class="fas " + icon)
