@@ -9,3 +9,10 @@ mixin button(title,link,mod,icon)
 		if icon
 			span.button__small-fa-icon
 				i(class="fas " + icon)
+
+
+mixin card-post(img_src,card_title,link)
+	.card-post
+		img(src=img_src)
+		h2 #{card_title}
+		+button('Читать',link)
