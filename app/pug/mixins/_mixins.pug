@@ -27,10 +27,19 @@ mixin footer-icons
 				a(href="#")
 					i(class="fab fa-" +item)
 			
+//- Mixins for cards
+//-------------
+
+mixin card(img_src,card_title,link,button_title,mod)
+	div(class="card card-" + mod)
+		img(class="card__img card__img-" + mod, src= img_src)
+		h2.card__title #{card_title}
+		+button(button_title,link)
 
 mixin card-post(img_src,card_title,link)
-	.card.card-post
-		img(src=img_src)
-		h2 #{card_title}
-		+button('Читать',link)
+	+card(img_src,card_title,link,"Читать","post")
 
+mixin card-portfolio(img_src,card_title,link)
+	+card(img_src,card_title,link,"Смотреть кейс","portfolio")
+
+//- End mixins for cards
