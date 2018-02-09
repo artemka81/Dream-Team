@@ -1,12 +1,32 @@
+/* variable */
+@import 'variable/variable';
+/* blocks styles */
+@import 'base/fonts_style';
+@import "ui_button.scss";
 
 /* variable */
 @import 'variable/variable';
 @import "ui_button.scss";
+@import "header-user";
 @import "footer.scss";
 
+$color: #222;
 
 
-/* blocks styles */
-@import 'base/fonts_style';
+*{
+	box-sizing: border-box;
+}
 
-@import "ui_button.scss";
+
+body {
+	padding: 0;
+	margin: 0;
+	color: $color;	
+}
+
+.icon-globe {
+	fill: #39B00F;
+	width: 112px;
+	height: 112px;
+}
+
