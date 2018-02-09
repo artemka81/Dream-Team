@@ -1,12 +1,5 @@
-$bg-footer-black:#252525;
-$white:#fff;
-$color-icon-heard:#d10946;
-$yellow:#ffe400;
 
-ul{
-	margin: 0;
-	padding: 0;
-}
+
 
 .footer-page{
 	display: flex;
@@ -18,7 +11,7 @@ ul{
 }
 
 .footer{
-	padding:60px 20px 0;
+	padding:60px 20px 40px;
 	color:$white;
 	background-color: $bg-footer-black;	
 		.menu{			
@@ -26,10 +19,11 @@ ul{
 			flex-direction: column;	
 			align-items: center;
 			li{				
-				list-style-type: none;
+				list-style-image:none;
+				list-style-position:outside;
+				list-style-type:none;
 				a{
-					width:120px;
-					
+					width:120px;					
 					text-align: left;
 					display: block;
 					color: $white;
@@ -38,9 +32,18 @@ ul{
 			}
 		}
 	}
-
+.footer-link{
+	color: $white;
+	font-weight: 600;
+		&:hover, &:focus { 
+			color: $white;
+			cursor: pointer;
+		}
+}
 
 .footer-copy{
+	line-height: 2;
+	padding-bottom:16px;
 	.fa-heart{
 		color: $color-icon-heard;
 		font-size: .8rem;
