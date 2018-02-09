@@ -1,25 +1,18 @@
-$white: #FFF;
-$red: #b51919;
-$blue: #037ec6;
-$yellow: #ffba00;
-$light-blue: #dde8ee;
-
-
 .button {
 	font-size: 16px;
 	font-weight: 600;
 	transition: 0.2s ease-in;
 	display: inline-block;
 	padding: 10px 30px;
-	margin: 10px;
-	border: 2px solid $light-blue;
+	margin: 10px 20px;
+	border: 2px solid $button-border-color;
 	border-radius: 25px;
-	background-color: $white;
+	background-color: $button-color-regular;
 	color: #037EC6;
 	text-decoration: none;
 	
 	&:hover, &:focus { 
-		background: $light-blue; 
+		background: $button-border-color; 
 		text-decoration: none;
 		cursor: pointer;
 		color: #037EC6;
@@ -34,12 +27,12 @@ $light-blue: #dde8ee;
 }
 
 .button-regular {
-	background-color: $white;
+	background-color: $button-color-regular;
 }
  
 .button-delete {
 	color: $white;
-	background-color: $red;
+	background-color: $button-color-delete;
 	padding: 10px 20px;
 	border: none;
 	&:hover, &:focus { 
@@ -54,7 +47,7 @@ $light-blue: #dde8ee;
  
 .button-save {
 	color: $white;
-	background-color: $blue;
+	background-color: $button-color-save;
 	border: none;
 	&:hover, &:focus { 
 		background: #0094eb; 
@@ -68,7 +61,7 @@ $light-blue: #dde8ee;
  
 .button-edit {
 	color: $white;
-	background-color: $yellow;
+	background-color: $button-color-edit;
 	padding: 10px 20px;
 	border: none;
 	&:hover, &:focus { 
