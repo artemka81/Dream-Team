@@ -54,7 +54,7 @@ gulp.task('server:docs', function() {
 });
 
 gulp.task('styles', function() {
-	return gulp.src('./app/scss/**/*.scss')
+	return gulp.src('./app/scss/main.scss')
 	.pipe(plumber({
 		errorHandler: notify.onError(function(err){
 			return {
