@@ -26,4 +26,21 @@ mixin footer-icons
 			li
 				a(href="#")
 					i(class="fab fa-" +item)
+
+
+//- help-elements
+//---------------
+mixin error(nameClass,title_message)
+	div(class="error-message error-message__"+ nameClass)= title_message
+
+mixin error_description(nameClassblock,nameClass,title_message)
+	div(class="block-error__"+ nameClassblock)
+		div(class="error-message error-message__"+ nameClass)= title_message
+		div(class="description-error")
+			if block
+				block
+
+mixin badge-element(title)
+	.badge-element= title
 			
+
