@@ -4,15 +4,19 @@
 @import 'base/fonts_style';
 @import "ui_button.scss";
 
+/* variable */
+@import 'variable/variable';
 @import "ui_button.scss";
 @import "header-user";
 @import "footer.scss";
 
 $color: #222;
 
+
 *{
 	box-sizing: border-box;
 }
+
 
 body {
 	padding: 0;
