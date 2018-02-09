@@ -5,6 +5,11 @@ $color-header-text: #fff;
 $color-header-desc: #81C5EE;
 $color-mobile-login-text: #FFE400;
 
+//- .header-helper - don't use it
+.header-helper{
+	position: relative;
+}
+
 .header-user {
 	width: 100%;
 	height: 200px;
