@@ -1,5 +1,12 @@
+/* variable */
+@import 'variable/variable';
+/* blocks styles */
+@import 'base/fonts_style';
+@import "ui_button.scss";
+
 @import "ui_button.scss";
 @import "header-user";
+@import "footer.scss";
 
 $color: #222;
 
@@ -13,35 +20,9 @@ body {
 	color: $color;	
 }
 
-h1 {
-	font-size: 28px;
-	font-weight: 600;
-	font-family: 'PT Sans', Sans-Serif;
-}
-
-p {
-	font-size: 18px;
-	font-weight: 600;
-	font-family: 'Orienbaum', Serif;
-}
-
-button {
-	font-size: 16px;
-	font-weight: 600;
-	color: #FFF;
-	background-color: #4B9F18;
-	border: none;
-	padding: 18px;
-	cursor: pointer;
-	transition: 0.2s ease-in;
-}
-
-.block {
-	display: flex;
-}
-
 .icon-globe {
 	fill: #39B00F;
 	width: 112px;
 	height: 112px;
 }
+

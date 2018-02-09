@@ -105,7 +105,7 @@ $color-mobile-login-text: #FFE400;
 }
 .header-user__brand{
 	display: inline-block;
-	text-decoration: none;
+	text-decoration: none !important;
 	margin-left: 15px;
 	@media (min-width: 764px){
 		margin-left: 20px;
@@ -115,6 +115,7 @@ $color-mobile-login-text: #FFE400;
 	h1{
 		padding: 0;
 		margin: 0;
+		margin-bottom: 20px;
 		color: $color-header-text;
 		font-family: $header-font;
 		font-size: 27px;
@@ -173,6 +174,8 @@ $color-mobile-login-text: #FFE400;
 	@media (min-width: 992px){margin-top: 0;}
 	form{
 		button{
+			cursor: pointer;
+			border: none;
 			padding: 0;
 			margin: 0;
 			font-family: $header-font;
@@ -193,6 +196,8 @@ $color-mobile-login-text: #FFE400;
 	@media (min-width: 992px){margin-top: 0;}
 	form{
 		button{
+			cursor: pointer;
+			border: none;
 			padding: 0;
 			margin: 0;
 			font-family: $header-font;
@@ -249,11 +254,15 @@ $color-mobile-login-text: #FFE400;
 			@media (min-width: 992px){
 				margin-top: 0;
 			}
+			&:before{
+				display: none !important;
+			}
 			a{
 				color: $color-header-text;
 				font-family: $header-font;
 				font-size: 18px;
 				font-weight: 600;
+				text-decoration: underline;
 				&:hover{
 					text-decoration: none;
 				}
@@ -265,8 +274,99 @@ $color-mobile-login-text: #FFE400;
 	}
 }
 // -------------------------------------------
-//          Вспомогательный класс
+//   Helper class for Java script Navigation
 // -------------------------------------------
 .header-user__mobilebar-show{
 	display: block !important;
 }
+// -------------------------------------------
+//          img avatar-user
+// -------------------------------------------
+.avatar-user__circle-border{
+	border-radius: 50%;
+	overflow: hidden;
+	img{
+		width: 100%; height: 100%;
+			 -o-object-fit: cover; 
+			    object-fit: cover;
+	}
+}
+// -------------------------------------------
+//           header-user__inner
+// -------------------------------------------
+.header-user__inner{
+	display: none;
+	// display: block;
+	// position: absolute;
+	// bottom: 0;
+	// left: 0;
+	// right: 0;
+	// z-index: 10;
+	padding: 40px 20px;
+
+	width:100%;
+	@media (min-width: 992px){
+		padding: 0;
+		position: relative;
+		width:50%;
+		display: flex;
+		justify-content: flex-end;
+		z-index: 0;
+	}
+}
+.header-user__inner-box{
+	display: flex;
+}
+.header-user__inner-avatar{
+	margin-right: 15px;
+	.avatar-user__circle-border{
+		width: 48px;
+		height: 48px;
+	}
+}
+.header-user__inner-content-box{}
+.header-user__inner-name-desc{
+	margin-bottom: 10px;
+	h2{
+		margin-top: 0;
+		margin-bottom: 5px;
+		padding-top: 0;
+		color: $color-header-text;
+		font-family: $header-font;
+		font-weight: 800;
+		font-size: 16px;
+		line-height: 1;
+	}
+	p{
+		color: #A3A4A5;
+		color: $color-header-text;
+		font-family: $header-font;
+		font-size: 13px;
+		font-weight: 500;
+		@media (min-width: 992px){
+			color: $color-header-desc;
+		}
+	}
+}
+.header-user__inner-buttons-box{
+	display: flex;
+	justify-content: flex-start;
+	.button{
+		margin: 0;
+		padding: 7px 16px;
+	}
+}
+.button-header-user__inner-btn{
+		font-size: 13px !important;
+		color: $white;
+		background-color: $blue;
+		border: none;
+		&:hover, &:focus { background: #0094eb; }
+		&:active { background: #0069a7; }
+		@media (min-width: 992px){ background: #1F5879; }
+		
+}
+.header-user__inner-profile{
+	margin-right: 10px;
+}
+.header-user__inner-quit{}

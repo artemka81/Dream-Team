@@ -1,9 +1,8 @@
 extends layouts/ui-layout.pug
-include modules/nav.pug
-
 block variables
 	- var title = 'Шапка user'
 	- var pageClass = 'ui-header-user'
+	- var menu = [{"href": "/","linkName": "Главная"},{"href": "/about.html", "linkName": "Обо мне"},{"href": "/works.html","linkName": "Работы"},{"href": "/blog.html","linkName": "Блог"},{"href": "/contact.html","linkName": "Контакты"}]
 
 block content
 	//- .header-helper - don't use it
@@ -34,7 +33,7 @@ block content
 							form
 								button Вход
 				.header-user__nav-box(id="navigation-menu")
-					+nav-main("header-user__nav")
+					+header-menu("header-user__nav",menu)
 
 		br
 		br
@@ -68,13 +67,29 @@ block content
 								h1 Digital Lyfestyle
 							.header-user__brand-desc
 								p Сайт IT специалиста
-					.header-user__login(id="navigation-login")
-						.header-user__login-box
-							.header-user__signup-form
-								form
-									button Регистрация
-							.header-user__login-form
-								form
-									button Вход
+
+
+
+
+					.header-user__inner(id="navigation-login")
+						.header-user__inner-box
+								.header-user__inner-avatar
+									+avatar-user("user-content/avatar/0001.jpg")
+								.header-user__inner-content-box
+									.header-user__inner-name-desc
+										h2 Емельян Казаков
+										p Пользователь
+									.header-user__inner-buttons-box
+										.header-user__inner-profile
+											form
+												+button('Профиль','#','header-user__inner-btn')
+										.header-user__inner-quit
+											form
+												+button('Выход','#','header-user__inner-btn')
+
+
+
+
+
 					.header-user__nav-box(id="navigation-menu")
-						+nav-main("header-user__nav")
+						+header-menu("header-user__nav",menu)
