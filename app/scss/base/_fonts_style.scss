@@ -7,8 +7,11 @@ html, body{
 	font-weight: 400;
 }
 p {
+	font-size: 16px;
 	padding: 0;
 	margin: 0;
+	line-height: 36px;
+	margin-bottom: 10px;
 	a{
 	color: $linkColor;
 	}
@@ -19,13 +22,14 @@ h1,h3,h4,h5,h6{
 	color: #222222;
 	padding: 0;
 	margin: 0;
+	margin-bottom: 20px;
 }
 h2{
 	font-weight: 600;
 	font-size: 26px;
 	color: #383737;
 	padding: 0;
-	margin: 0;
+	margin-bottom: 20px;
 }
 
 h1{
@@ -52,6 +56,7 @@ ul{
 		color: $listItemColor;
 		position: relative;
 		padding-left: 15px;
+		margin-bottom: 15px;
 		
 		&:before{
 			content:'';
