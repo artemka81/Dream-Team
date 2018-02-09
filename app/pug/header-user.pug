@@ -38,12 +38,8 @@ block content
 		br
 		br
 		br
-		br
-		br
-		br
-		br
-		br
-		br
+		p
+			| Каждое мобильное меню хорошо работает только по отдельности, здесь так как 2 блока с одинаковыми js настройками сработает только первое меню.
 		br
 		br
 		br
@@ -67,10 +63,6 @@ block content
 								h1 Digital Lyfestyle
 							.header-user__brand-desc
 								p Сайт IT специалиста
-
-
-
-
 					.header-user__inner(id="navigation-login")
 						.header-user__inner-box
 								.header-user__inner-avatar
@@ -86,10 +78,5 @@ block content
 										.header-user__inner-quit
 											form
 												+button('Выход','#','header-user__inner-btn')
-
-
-
-
-
 					.header-user__nav-box(id="navigation-menu")
-						+header-menu("header-user__nav",menu)
+						+header-menu("header-user__nav header-user__nav--inner",menu)
