@@ -9,3 +9,21 @@ mixin button(title,link,mod,icon)
 		if icon
 			span.button__small-fa-icon
 				i(class="fas " + icon)
+
+//- footer-menu
+//-------------
+mixin menu(menu)
+	ul.menu
+		each link in menu    
+			li
+				a(href=link.href)=link.linkName
+
+//- footer-icon
+//-------------
+mixin footer-icons
+	ul.footer-icons
+		each item, index in ['vk','twitter','youtube-square', 'instagram', 'facebook-f']
+			li
+				a(href="#")
+					i(class="fab fa-" +item)
+			
