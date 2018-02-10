@@ -1,11 +1,9 @@
-
+/* variable */
 @import 'variable/variable';
-
-@import "footer.scss";
-
 /* blocks styles */
 @import 'base/fonts_style';
-
+@import 'variable/variable';
 @import "ui_button";
-
+@import "header-user";
+@import "footer";
 @import "cards";

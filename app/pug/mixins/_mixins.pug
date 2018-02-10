@@ -9,7 +9,19 @@ mixin button(title,link,mod,icon)
 		if icon
 			span.button__small-fa-icon
 				i(class="fas " + icon)
-
+//- img avatar-user
+//-------------
+mixin avatar-user(link)
+	.avatar-user__circle-border
+		img(src=link, alt="image")
+//- header-menu
+//-------------
+mixin header-menu(navClass,menu)
+	nav(Class=navClass)
+		ul
+			each link in menu    
+				li
+					a(href=link.href)=link.linkName
 //- footer-menu
 //-------------
 mixin menu(menu)
