@@ -1,0 +1,37 @@
+extends layouts/ui-layout.pug
+
+block variables
+ -var textMessage = "Парк находится в горах Сьерра-Невада на востоке штата Калифорния и занимает огромную даже для Америки площадь, около 3000 кв. км. На этой площади расположены гранитные скальные стены огромной высоты, которыми, собственно, в первую очередь и знаменит парк, водопады, среди которых одни из самых высоких в США, три рощи гигантской секвойи — самого долгоживущего в мире дерева и самого большого по диаметру ствола, а также масса рек, озёр, лесов и лугов. "
+
+block content
+    section
+        p Поле для ввода
+        input( class="form-name" type="text" name="YourName" placeholder="Введите имя")
+    section
+        p Поле на всю ширину
+        input( class="form-full-width" type="text" name="FullWidth" placeholder="Поле на всю ширину")
+    section
+        p Сообщение - Textarea
+        textarea( class="form-message" name="Message" placeholder="Сообщение") #{textMessage}
+    section
+        .form-download
+            .form-download__title Изображение jpg или png, размером больше чем 100х100 пикселей, и весом до 2Мб.
+            .form-download__container 
+                label.form-download__btn Выбрать файл
+                    input(type="file" id="file" name="file" style="display:none")
+                input( class="form-download__file-name" id="value" type="text" value='Файл не выбран' disabled)
+    section
+        .form-download
+            .form-download__title Изображение jpg или png, рекомендуемая ширина 945px и больше, высота от 400px и более, вес до 2Мб.
+            .form-download__container 
+                label.form-download__btn Выбрать файл
+                    input(type="file" id="file2" name="file" style="display:none")
+                input( class="form-download__file-name" id="value" type="text" value='Файл не выбран' disabled)
+            .form-download__preview
+                .form-download__preview__container(id="output")
+                    
+                    
+      
+
+block scripts
+    script(src="js/fileReader.js")

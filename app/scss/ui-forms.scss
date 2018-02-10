@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&subset=cyrillic');
+$font-family : 'Open Sans' , sans-serif;
+$font-size : 16px;
+
+
+@mixin border{
+    border:none;
+    border: 1px solid #b1bfc7;
+    border-radius: 4px;
+}
+@mixin focus{
+    &:focus{
+        outline: none;
+    }
+}
+
+section{
+    padding: {
+        left: 10px;
+        top: 20px;
+        right: 10px;
+    }
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 943px;
+    margin: 0 auto;
+}
+
+.form-name{
+    padding: {
+        left: 16px;
+    };
+    width: 300px;
+    height: 44px;
+    font-size: $font-size;
+    
+    @include border;
+    @include focus;
+}
+
+.form-full-width{
+    padding: {
+        left: 16px;
+    };
+    width: 100%;
+    height: 44px;
+    font-size: $font-size;
+
+    @include border;
+    @include focus;
+}
+
+.form-message{
+    padding: {
+        left: 16px;
+        right: 16px;
+        top: 16px;
+    }
+    width: 100%;
+    height: 200px;
+    font-size: $font-size ;
+    resize: none;
+    overflow-x: hidden; 
+
+    @include border;
+    @include focus;
+}
+
+.form-download{
+    font-size: $font-size;
+    font-family: $font-family;
+    .form-download__title{
+        padding-bottom: 10px;
+        
+        font-family: $font-family;
+    }
+
+    .form-download__container{
+        display: flex;
+        
+
+            .form-download__btn{
+                width: 132px;
+                height: 44px;
+                
+                font-weight: normal;
+                border-radius: 4px;
+                color: #fff;
+                background: #b1bfc7;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                
+                margin: 0;
+            }
+
+            .form-download__file-name{
+                width: 100%;
+                padding: {
+                    left: 10px;
+                };
+                border: none;
+                display: block;
+                height: 44px;
+                background: none;
+                color: #8e9ba2;
+            
+            }
+
+            
+    }
+
+    .form-download__preview{
+                margin-top: 10px;
+                padding: {
+                    top: 10px;
+                }
+                
+
+                .form-download__preview__container{
+                    width: 260px;
+                    height: 140px;
+                    position: relative;
+                    .form-download__image-container{
+                        width: 260px;
+                        height: 140px;
+                        
+                    }
+
+                    .form-download__image{
+                        width: 100%;
+                        height: 140px;
+                    }
+                }
+                .form-download__preview__delete{
+                    display: flex;
+                    justify-content: flex-end; 
+                    width: 100%;
+                    height: 30;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    padding: {
+                        right: 10px;
+                        bottom: 10px;
+                    }
+
+                    .testBtn{
+                        font-size: 14px;
+                        background: red;
+                        padding: 5px 20px;
+                        border-radius: 16px;
+                        font-weight: bold;
+                        color: white;
+                        cursor: pointer;
+                        
+                        &:hover{
+                            text-decoration: none;
+                        }
+                    }
+                }
+    }
+}
+
+
+
+
+

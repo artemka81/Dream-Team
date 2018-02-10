@@ -2,3 +2,6 @@ mixin icon(name,mod)
 	- mod = mod || ''
 	svg(class="icon icon-" + name + ' ' + mod)
 		use(xlink:href="img/sprite.svg#" + name)
+
+mixin formTText(className,name,pH)
+	input(class=className type="text" name=name placeholder=pH)
