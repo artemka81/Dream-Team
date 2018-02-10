@@ -38,6 +38,33 @@ mixin footer-icons
 			li
 				a(href="#")
 					i(class="fab fa-" +item)
+
+
+
+//- help-elements
+//---------------
+mixin error(nameClass,title_message)
+	div(class="error-message error-message__"+ nameClass)= title_message
+
+mixin error_description(nameClassblock,nameClass,title_message)
+	div(class="block-error block-error__"+ nameClassblock)
+		div(class="error-message error-message__"+ nameClass)= title_message
+		div(class="description-error")
+			if block
+				block
+
+mixin badge-element(title)
+	.badge-element= title
+
+mixin avatar(modifName,img,altName)
+	div(class="avatar avatar-" +modifName)
+		img(src= img,alt= altName)
+
+mixin checkbox(className,idName,name,forName)
+	div(class=className)
+		input(id=idName type="checkbox" name=name checked hidden)
+		label(for=forName) Запомнить меня
+=======
 			
 //- Mixins for cards
 //-------------
@@ -74,5 +101,6 @@ mixin full-post
 			p Центром парка является долина 
 				a(href="") Йосемити, 
 				| круглый год переполненная туристами, зато в большей части парка никаких туристов нет. Если вы хотите погулять по территории парка, к вашим услугам огромная разветвлённая система троп, по которым проложены маршруты длительностью от получаса до нескольких дней. Ко всем этим прелестям бесплатно прилагаются животные и птицы. Если, на ваше счастье, медведей вы скорее всего не увидите, то оленей или бурундуков увидите почти гарантированно, даже не обладая специальными навыками
+
 			
 
