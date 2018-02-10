@@ -7,3 +7,25 @@
 @import "header-user";
 @import "footer";
 @import "cards";
+@import "full-post";
+
+$color: #222;
+
+
+*{
+	box-sizing: border-box;
+}
+
+
+body {
+	padding: 0;
+	margin: 0;
+	color: $color;	
+}
+
+.icon-globe {
+	fill: #39B00F;
+	width: 112px;
+	height: 112px;
+}
+
