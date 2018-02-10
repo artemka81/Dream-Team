@@ -1,8 +1,15 @@
-
 /* variable */
 @import 'variable/variable';
-@import "ui_button.scss";
-@import "footer.scss";
+/* blocks styles */
+@import 'base/fonts_style';
+@import 'variable/variable';
+@import "ui_button";
+@import "header-user";
+@import "footer";
+@import "cards";
+@import "full-post";
+
+$color: #222;
 
 
 
@@ -10,3 +17,21 @@
 @import 'base/fonts_style';
 @import 'helper.scss';
 @import "ui_button.scss";
+=======
+*{
+	box-sizing: border-box;
+}
+
+
+body {
+	padding: 0;
+	margin: 0;
+	color: $color;	
+}
+
+.icon-globe {
+	fill: #39B00F;
+	width: 112px;
+	height: 112px;
+}
+

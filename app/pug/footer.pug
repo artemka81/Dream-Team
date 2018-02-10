@@ -1,8 +1,9 @@
 extends layouts/ui-layout.pug
+
 block variables
-	- var title = 'Подвал'
+	-	var title = 'Подвал'
 	- var pageClass = 'footer-page'
-	- var menu = [{"href": "/","linkName": "Главная"},{"href": "/about.html", "linkName": "Обо мне"},{"href": "/works.html","linkName": "Работы"},{"href": "/blog.html","linkName": "Блог"},{"href": "/contact.html","linkName": "Контакты"}]
+	-	var menu = [{"href": "/","linkName": "Главная"},{"href": "/about.html", "linkName": "Обо мне"},{"href": "/works.html","linkName": "Работы"},{"href": "/blog.html","linkName": "Блог"},{"href": "/contact.html","linkName": "Контакты"}]
                  
   
           
@@ -24,10 +25,5 @@ block content
 				.col-md-4 
 					+footer-icons
 
+	
 
-
-
-
-
-block scripts
-	script(defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js")
