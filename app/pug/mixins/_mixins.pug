@@ -38,6 +38,24 @@ mixin footer-icons
 			li
 				a(href="#")
 					i(class="fab fa-" +item)
+			
+//- Mixins for cards
+//-------------
+
+mixin card(img_src,card_title,link,button_title,mod)
+	div(class="card card-" + mod)
+		img(class="card__img card-" + mod +"__img", src= img_src)
+		h2.card__title #{card_title}
+		+button(button_title,link)
+
+mixin card-post(img_src,card_title,link)
+	+card(img_src,card_title,link,"Читать","post")
+
+mixin card-portfolio(img_src,card_title,link)
+	+card(img_src,card_title,link,"Смотреть кейс","portfolio")
+
+//- End mixins for cards
+
 					
 //- full-post
 //-----------
@@ -57,3 +75,4 @@ mixin full-post
 				a(href="") Йосемити, 
 				| круглый год переполненная туристами, зато в большей части парка никаких туристов нет. Если вы хотите погулять по территории парка, к вашим услугам огромная разветвлённая система троп, по которым проложены маршруты длительностью от получаса до нескольких дней. Ко всем этим прелестям бесплатно прилагаются животные и птицы. Если, на ваше счастье, медведей вы скорее всего не увидите, то оленей или бурундуков увидите почти гарантированно, даже не обладая специальными навыками
 			
+
