@@ -34,7 +34,7 @@ mixin error(nameClass,title_message)
 	div(class="error-message error-message__"+ nameClass)= title_message
 
 mixin error_description(nameClassblock,nameClass,title_message)
-	div(class="block-error__"+ nameClassblock)
+	div(class="block-error block-error__"+ nameClassblock)
 		div(class="error-message error-message__"+ nameClass)= title_message
 		div(class="description-error")
 			if block
@@ -42,5 +42,14 @@ mixin error_description(nameClassblock,nameClass,title_message)
 
 mixin badge-element(title)
 	.badge-element= title
+
+mixin avatar(modifName,img,altName)
+	div(class="avatar avatar-" +modifName)
+		img(src= img,alt= altName)
+
+mixin checkbox(className,idName,name,forName)
+	div(class=className)
+		input(id=idName type="checkbox" name=name checked hidden)
+		label(for=forName) Запомнить меня
 			
 
