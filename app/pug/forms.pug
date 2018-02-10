@@ -6,10 +6,10 @@ block variables
 block content
     section
         p Поле для ввода
-        input( class="form-name" type="text" name="YourName" placeholder="Введите имя")
+        +formTText('form-name','YourName','Введите имя')
     section
         p Поле на всю ширину
-        input( class="form-full-width" type="text" name="FullWidth" placeholder="Поле на всю ширину")
+        +formTText('form-full-width','FullWidth','Поле на всю ширину')
     section
         p Сообщение - Textarea
         textarea( class="form-message" name="Message" placeholder="Сообщение") #{textMessage}
