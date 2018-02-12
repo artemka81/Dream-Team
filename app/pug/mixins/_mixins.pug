@@ -5,3 +5,26 @@ mixin icon(name,mod)
 
 mixin formTText(className,name,pH)
 	input(class=className type="text" name=name placeholder=pH)
+
+mixin btnUpload(title,id,bbool)
+	if bbool
+		.form-download
+			.form-download__title #{title}
+			.form-download__container 
+				label.form-download__btn Выбрать файл
+					input(type="file" id=id name="file" style="display:none")
+				input( class="form-download__file-name" id="value" type="text" value='Файл не выбран' disabled)
+	else
+		.form-download
+			.form-download__title #{title}
+			.form-download__container 
+				label.form-download__btn 
+					span Выбрать файл
+					input(type="file" id=id name="file" style="display:none")
+				input( class="form-download__file-name" id="value" type="text" value='Файл не выбран' disabled)
+			.form-download__preview
+				.form-download__preview__container(id="output")
+					.form-download__preview__delete
+						a.testBtn Удалить
+					.form-download__image-container
+						img.form-download__image(src="img/bg/yosemite-national-park2.png")

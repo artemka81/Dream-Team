@@ -5,33 +5,20 @@ block variables
 
 block content
     section
-        p Поле для ввода
+        p.p Поле для ввода
         +formTText('form-name','YourName','Введите имя')
     section
-        p Поле на всю ширину
+        p.p Поле на всю ширину
         +formTText('form-full-width','FullWidth','Поле на всю ширину')
     section
-        p Сообщение - Textarea
+        p.p Сообщение - Textarea
         textarea( class="form-message" name="Message" placeholder="Сообщение") #{textMessage}
     section
-        .form-download
-            .form-download__title Изображение jpg или png, размером больше чем 100х100 пикселей, и весом до 2Мб.
-            .form-download__container 
-                label.form-download__btn Выбрать файл
-                    input(type="file" id="file" name="file" style="display:none")
-                input( class="form-download__file-name" id="value" type="text" value='Файл не выбран' disabled)
+        +btnUpload('Изображение jpg или png, размером больше чем 100х100 пикселей, и весом до 2Мб.','file',true)
     section
-        .form-download
-            .form-download__title Изображение jpg или png, рекомендуемая ширина 945px и больше, высота от 400px и более, вес до 2Мб.
-            .form-download__container 
-                label.form-download__btn Выбрать файл
-                    input(type="file" id="file2" name="file" style="display:none")
-                input( class="form-download__file-name" id="value" type="text" value='Файл не выбран' disabled)
-            .form-download__preview
-                .form-download__preview__container(id="output")
-                    
+        +btnUpload('Изображение jpg или png, рекомендуемая ширина 945px и больше, высота от 400px и более, вес до 2Мб.','file2',false)
                     
       
 
 block scripts
-    script(src="js/fileReader.js")
+    //- script(src="js/fileReader.js")

@@ -14,6 +14,11 @@ $font-size : 16px;
     }
 }
 
+.p{
+    font-family: $font-family;
+    font-weight: normal;
+}
+
 section{
     padding: {
         left: 10px;
@@ -30,7 +35,8 @@ section{
     padding: {
         left: 16px;
     };
-    width: 300px;
+    width: 100%;
+    max-width: 300px;
     height: 44px;
     font-size: $font-size;
     
@@ -73,11 +79,20 @@ section{
         padding-bottom: 10px;
         
         font-family: $font-family;
+
+        @media screen and (max-width: 400px) {
+            text-align: center;
+        }
     }
 
     .form-download__container{
         display: flex;
-        
+
+        @media screen and (max-width: 400px) {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
 
             .form-download__btn{
                 width: 132px;
@@ -96,7 +111,6 @@ section{
             }
 
             .form-download__file-name{
-                width: 100%;
                 padding: {
                     left: 10px;
                 };
@@ -105,6 +119,11 @@ section{
                 height: 44px;
                 background: none;
                 color: #8e9ba2;
+
+                @media screen and (max-width: 400px) {
+                    padding: 0;
+                    text-align: center;
+                }
             
             }
 
@@ -117,15 +136,30 @@ section{
                     top: 10px;
                 }
                 
+                @media screen and (max-width: 400px) {
+                    display: flex;
+                    justify-content: center;  
+                }
 
                 .form-download__preview__container{
                     width: 260px;
                     height: 140px;
                     position: relative;
+                    @media screen and (max-width: 400px) {
+                        width: 100%;
+                        max-width: 260px;
+                       
+                    }
+
+                    
                     .form-download__image-container{
                         width: 260px;
                         height: 140px;
                         
+                        @media screen and (max-width: 400px) {
+                            width: 100%;
+                            max-width: 260px;
+                        }
                     }
 
                     .form-download__image{
