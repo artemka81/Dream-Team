@@ -1,35 +1,32 @@
+/* variable */
+@import 'variable/variable';
+/* blocks styles */
+@import 'base/fonts_style';
+@import 'variable/variable';
+@import "ui_button";
+@import "header-user";
+@import "footer";
+@import "cards";
+@import "full-post";
+
 $color: #222;
 
+
+
+/* blocks styles */
+@import 'base/fonts_style';
+@import 'helper.scss';
+@import "ui_button.scss";
+=======
+*{
+	box-sizing: border-box;
+}
+
+
 body {
-	color: $color;
-	
-}
-
-h1 {
-	font-size: 28px;
-	font-weight: 600;
-	font-family: 'PT Sans', Sans-Serif;
-}
-
-p {
-	font-size: 18px;
-	font-weight: 600;
-	font-family: 'Orienbaum', Serif;
-}
-
-button {
-	font-size: 16px;
-	font-weight: 600;
-	color: #FFF;
-	background-color: #4B9F18;
-	border: none;
-	padding: 18px;
-	cursor: pointer;
-	transition: 0.2s ease-in;
-}
-
-.block {
-	display: flex;
+	padding: 0;
+	margin: 0;
+	color: $color;	
 }
 
 .icon-globe {

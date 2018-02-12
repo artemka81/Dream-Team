@@ -1,0 +1,29 @@
+extends layouts/ui-layout.pug
+
+block variables
+	-	var title = 'Подвал'
+	- var pageClass = 'footer-page'
+	-	var menu = [{"href": "/","linkName": "Главная"},{"href": "/about.html", "linkName": "Обо мне"},{"href": "/works.html","linkName": "Работы"},{"href": "/blog.html","linkName": "Блог"},{"href": "/contact.html","linkName": "Контакты"}]
+                 
+  
+          
+block content
+	.lorem &nbsp;
+	footer.footer
+		.container
+			.row
+				.col-md-4
+					p.footer-copy © Юрий Ключевский
+						br
+						|	Создано с 
+						i.fas.fa-heart 
+						|  в 
+						a.footer-link(href="http://webcademy.ru/" target="_blank") WebCademy.ru
+						|  в 2018 году
+				.col-md-4
+					+menu(menu)
+				.col-md-4 
+					+footer-icons
+
+	
+

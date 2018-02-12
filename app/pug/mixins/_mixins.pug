@@ -3,6 +3,7 @@ mixin icon(name,mod)
 	svg(class="icon icon-" + name + ' ' + mod)
 		use(xlink:href="img/sprite.svg#" + name)
 
+
 mixin formTText(className,name,pH)
 	input(class=className type="text" name=name placeholder=pH)
 
@@ -28,3 +29,106 @@ mixin btnUpload(title,id,bbool)
 						a.testBtn Удалить
 					.form-download__image-container
 						img.form-download__image(src="img/bg/yosemite-national-park2.png")
+
+mixin button(title,link,mod,icon)
+	- mod = mod || 'regular'
+	a(class="button button-" + mod, href=link) #{title} 
+		if icon
+			span.button__small-fa-icon
+				i(class="fas " + icon)
+//- img avatar-user
+//-------------
+mixin avatar-user(link)
+	.avatar-user__circle-border
+		img(src=link, alt="image")
+//- header-menu
+//-------------
+mixin header-menu(navClass,menu)
+	nav(Class=navClass)
+		ul
+			each link in menu    
+				li
+					a(href=link.href)=link.linkName
+//- footer-menu
+//-------------
+mixin menu(menu)
+	ul.menu
+		each link in menu    
+			li
+				a(href=link.href)=link.linkName
+
+//- footer-icon
+//-------------
+mixin footer-icons
+	ul.footer-icons
+		each item, index in ['vk','twitter','youtube-square', 'instagram', 'facebook-f']
+			li
+				a(href="#")
+					i(class="fab fa-" +item)
+
+
+
+//- help-elements
+//---------------
+mixin error(nameClass,title_message)
+	div(class="error-message error-message__"+ nameClass)= title_message
+
+mixin error_description(nameClassblock,nameClass,title_message)
+	div(class="block-error block-error__"+ nameClassblock)
+		div(class="error-message error-message__"+ nameClass)= title_message
+		div(class="description-error")
+			if block
+				block
+
+mixin badge-element(title)
+	.badge-element= title
+
+mixin avatar(modifName,img,altName)
+	div(class="avatar avatar-" +modifName)
+		img(src= img,alt= altName)
+
+mixin checkbox(className,idName,name,forName)
+	div(class=className)
+		input(id=idName type="checkbox" name=name checked hidden)
+		label(for=forName) Запомнить меня
+
+			
+//- Mixins for cards
+//-------------
+
+mixin card(img_src,card_title,link,button_title,mod)
+	div(class="card card-" + mod)
+		img(class="card__img card-" + mod +"__img", src= img_src)
+		h2.card__title #{card_title}
+		+button(button_title,link)
+
+mixin card-post(img_src,card_title,link)
+	+card(img_src,card_title,link,"Читать","post")
+
+mixin card-portfolio(img_src,card_title,link)
+	+card(img_src,card_title,link,"Смотреть кейс","portfolio")
+
+//- End mixins for cards
+
+					
+//- full-post
+//-----------
+mixin full-post
+	.full-post
+		h1.full-post__title Национальный парк Йосемити
+		span.full-post__author Емельян Казаков
+		a.full-post__link(href="#") Путешествия
+		span.full-post__date 16 Марта 2017
+		a.full-post__link(href="#") 2 комментария
+		article
+			img.full-post__img(src="../img/posts/post-img.jpg", alt="Название картинки")
+			p Парк находится в горах 
+				a(href="") Сьерра-Невада 
+				| на востоке штата Калифорния и занимает огромную даже для Америки площадь, около 3000 кв. км. На этой площади расположены гранитные скальные стены огромной высоты, которыми, собственно, в первую очередь и знаменит парк, водопады, среди которых одни из самых высоких в США, три рощи гигантской секвойи — самого долгоживущего в мире дерева и самого большого по диаметру ствола, а также масса рек, озёр, лесов и лугов. 
+			p Центром парка является долина 
+				a(href="") Йосемити, 
+				| круглый год переполненная туристами, зато в большей части парка никаких туристов нет. Если вы хотите погулять по территории парка, к вашим услугам огромная разветвлённая система троп, по которым проложены маршруты длительностью от получаса до нескольких дней. Ко всем этим прелестям бесплатно прилагаются животные и птицы. Если, на ваше счастье, медведей вы скорее всего не увидите, то оленей или бурундуков увидите почти гарантированно, даже не обладая специальными навыками
+
+			
+
+
