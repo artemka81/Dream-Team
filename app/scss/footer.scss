@@ -22,6 +22,7 @@
 				list-style-image:none;
 				list-style-position:outside;
 				list-style-type:none;
+				&:before{ display: none;}
 				a{
 					width:120px;					
 					text-align: left;
@@ -54,6 +55,7 @@
 		display: flex;
 		li{
 			list-style-type: none;
+			&:before{ display: none;}
 			a{
 				display: block;
 				color: $white;
