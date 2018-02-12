@@ -3,6 +3,33 @@ mixin icon(name,mod)
 	svg(class="icon icon-" + name + ' ' + mod)
 		use(xlink:href="img/sprite.svg#" + name)
 
+
+mixin formTText(className,name,pH)
+	input(class=className type="text" name=name placeholder=pH)
+
+mixin btnUpload(title,id,bbool)
+	if bbool
+		.form-download
+			.form-download__title #{title}
+			.form-download__container 
+				label.form-download__btn Выбрать файл
+					input(type="file" id=id name="file" style="display:none")
+				input( class="form-download__file-name" id="value" type="text" value='Файл не выбран' disabled)
+	else
+		.form-download
+			.form-download__title #{title}
+			.form-download__container 
+				label.form-download__btn 
+					span Выбрать файл
+					input(type="file" id=id name="file" style="display:none")
+				input( class="form-download__file-name" id="value" type="text" value='Файл не выбран' disabled)
+			.form-download__preview
+				.form-download__preview__container(id="output")
+					.form-download__preview__delete
+						a.testBtn Удалить
+					.form-download__image-container
+						img.form-download__image(src="img/bg/yosemite-national-park2.png")
+
 mixin button(title,link,mod,icon)
 	- mod = mod || 'regular'
 	a(class="button button-" + mod, href=link) #{title} 
@@ -64,7 +91,7 @@ mixin checkbox(className,idName,name,forName)
 	div(class=className)
 		input(id=idName type="checkbox" name=name checked hidden)
 		label(for=forName) Запомнить меня
-=======
+
 			
 //- Mixins for cards
 //-------------
@@ -103,4 +130,5 @@ mixin full-post
 				| круглый год переполненная туристами, зато в большей части парка никаких туристов нет. Если вы хотите погулять по территории парка, к вашим услугам огромная разветвлённая система троп, по которым проложены маршруты длительностью от получаса до нескольких дней. Ко всем этим прелестям бесплатно прилагаются животные и птицы. Если, на ваше счастье, медведей вы скорее всего не увидите, то оленей или бурундуков увидите почти гарантированно, даже не обладая специальными навыками
 
 			
+
 
