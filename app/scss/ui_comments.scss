@@ -1,0 +1,50 @@
+.comment{
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	background-color: #ECF0F3;
+	border-radius: 5px;
+	margin-bottom: 10px;
+	padding: 20px;
+	
+	&__avatar{
+		margin: 0;
+		margin-right: 20px;
+	}
+
+	&__info{
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: flex-start;
+	}
+
+	&__info__user_date{
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: center;
+		color: #9B9B9B;
+		margin-bottom: 5px;
+	}
+
+	&__user_name {
+		font-weight: 800;
+		font-size: 16px;	
+		color: #383737;	
+		margin-right: 20px;
+	}
+
+	&__date {
+		margin-left: 10px;
+		font-weight: 600;
+		font-size: 14px;
+		letter-spacing: 0.1em;
+		color: #9B9B9B;
+	}
+
+	&__text {
+		font-size: 16px;
+		font-weight: 400;
+	}
+}

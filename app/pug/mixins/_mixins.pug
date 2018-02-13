@@ -68,6 +68,18 @@ mixin footer-icons
 
 
 
+mixin comment-info(avatar,user_name,date,text)
+	.comment
+		+avatar('small comment__avatar',avatar,user_name)
+		.comment__info
+			.comment__info__user_date
+				.comment__user_name #{user_name}
+				i.far.fa-clock
+				.comment__date #{date}
+			.comment__text #{text}
+			
+
+
 //- help-elements
 //---------------
 mixin error(nameClass,title_message)
