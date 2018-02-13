@@ -15,5 +15,18 @@ block content
 			.col-10
 				+full-post
 			.col
+		.row
+			.col
+			.col-10
+				.comment__title Оставить комментарий
+				.comment
+					+avatar('small','img/avatar-img/photo-small.jpg','')
+					.comment__author Юрий Ключевский
+					.comment__form
+						+error('comment','Комментарий не может быть пустым.')
+						textarea( class="form-message" name="Message" placeholder="Присоединиться к обсуждению...")
+						+button('Опубликовать','#')
+			.col
+
 
 	
