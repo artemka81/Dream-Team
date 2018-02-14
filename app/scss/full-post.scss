@@ -21,13 +21,13 @@
   }
 }
 
-.comment__title{
+.comment-post__title{
   font-size: 26px;
   margin-bottom: 20px;  
 }  
 
 /* CSS Grid */
-.comment{
+.comment-post{
   display:grid;
   grid-template-columns: auto 1fr;
   grid-gap:10px 20px;
@@ -39,17 +39,17 @@
     
 }
 
-.comment .avatar{
+.comment-post .avatar{
   grid-area: avatar;
   margin: 0;
  
 }
-.comment.error-message{
+.comment-post.error-message{
   grid-area: message;
 grid-column: span 2;
 }
 
-.comment__author{ 
+.comment-post__author{ 
   grid-area: author; 
   font-size: 16px;
   font-weight: bold;
@@ -57,25 +57,25 @@ grid-column: span 2;
   
 }   
 
-.comment__form{
+.comment-post__form{
   grid-area: form;
   
 }
 
-.comment__form{
+.comment-post__form{
   .error-message{
     margin:0 0 10px 0;
   }
 }
 
-.comment__form{
+.comment-post__form{
   .button{
     margin:10px 0;
   }
 }
 
 @media (max-width: 700px) {
-    .comment{
+    .comment-post{
         grid-template-areas: 
           "avatar author"
           "form form"         
