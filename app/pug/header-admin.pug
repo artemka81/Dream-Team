@@ -1,14 +1,13 @@
 extends layouts/ui-layout.pug
 block variables
 	- var title = 'Шапка user'
-	- var pageClass = 'ui-header-admin'
-	- var menuAdmin = [{"href": "/post-edit.html","linkName": "Пост", "classIcon": "plus-circle"},{"href": "/about-edit.html", "linkName": "Обо мне", "classIcon": "edit"},{"href": "/work-edit.html","linkName": "Работа", "classIcon": "plus-circle"},{"href": "/contact-edit.html","linkName": "Контакты", "classIcon": "edit"},{"href": "/message-edit.html","linkName": "Сообщения","classIcon": "envelope"}]
-	- var menu = [{"href": "/","linkName": "Главная"},{"href": "/about.html", "linkName": "Обо мне"},{"href": "/works.html","linkName": "Работы"},{"href": "/blog.html","linkName": "Блог"},{"href": "/contact.html","linkName": "Контакты"}]
+	- var pageClass = 'ui-header-admin'	
+
 
 block content
-	//- .header-helper - don't use it
+	include ../pug/modules/nav-admin.pug
+	//- .header-helper - don't use it	
 	.header-helper
-		+header-menu("header-user__nav",menu)
 		.header-user
 			.header-user__content
 				.header-user__mobile-bar(id="navigation-toggle")
@@ -35,15 +34,5 @@ block content
 							form
 								button Вход
 				.header-user__nav-box(id="navigation-menu")
-					+header-menu("header-admin__nav",menu,menuAdmin)
-
-		br
-		br
-		br
-		p
-			| Каждое мобильное меню хорошо работает только по отдельности, здесь так как 2 блока с одинаковыми js настройками сработает только первое меню.
-		br
-		br
-		br
-
+					+header-menu("menu-admin")
 	

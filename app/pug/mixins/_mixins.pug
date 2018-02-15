@@ -36,6 +36,13 @@ mixin button(title,link,mod,icon)
 		if icon
 			span.button__small-fa-icon
 				i(class="fas " + icon)
+
+//- btn-admin
+//-----------
+mixin btn(btnLink, btnClass, btnText) 
+	a(href=btnLink class='btn btn--'+btnClass)=btnText
+
+
 //- img avatar-user
 //-------------
 mixin avatar-user(link)
@@ -44,11 +51,11 @@ mixin avatar-user(link)
 
 //- header-menu
 //-------------
-mixin header-menu(navClass,menu,menuAdmin)
+mixin header-menu(navClass)
 	if(navClass === 'header-user__nav')
 		nav(Class=navClass)
 			ul
-				each link in menu    
+				each link in menu.user
 					li
 						a(href=link.href)=link.linkName
 	else
@@ -56,7 +63,7 @@ mixin header-menu(navClass,menu,menuAdmin)
 			.tab-profile
 				+avatar('small','img/avatar-img/photo-small.jpg','Админ')
 				.tab-profile__name Юрий Ключевский
-				+button('Администратор','#','edit')
+				+btn('#','admin', 'Администратор')
 
 			.tab-wrap
 				input(type="radio" name="tabs" id="tab1" checked)
@@ -64,7 +71,7 @@ mixin header-menu(navClass,menu,menuAdmin)
 					label(for="tab1") Страницы
 					nav.header-user__nav
 						ul
-							each link in menu   
+							each link in menu.user
 								li
 									a(href=link.href)=link.linkName
 				input(type="radio" name="tabs" id="tab2")
@@ -72,10 +79,10 @@ mixin header-menu(navClass,menu,menuAdmin)
 					label(for="tab2") Админка
 					nav(Class=navClass)
 						ul
-							each link in menuAdmin   
+							each item in menu.admin
 								li
-									span(class="fas fa-"+link.classIcon)
-									a(href=link.href)=link.linkName
+									i(class="fas fa-" +item.classIcon)
+									a(href=item.href)=item.linkName
 
 //- footer-menu
 //-------------
@@ -85,14 +92,6 @@ mixin menu(menu)
 			li
 				a(href=link.href)=link.linkName
 
-//- footer-icon
-//-------------
-mixin footer-icons
-	ul.footer-icons
-		each item, index in ['vk','twitter','youtube-square', 'instagram', 'facebook-f']
-			li
-				a(href="#")
-					i(class="fab fa-" +item)
 
 
 

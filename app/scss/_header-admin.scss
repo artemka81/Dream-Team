@@ -9,17 +9,44 @@
   flex-direction: column;
   position: absolute;
   top: 0;
-	left: 0;
+  left: 0;
+  padding-top:40px;   
   background-color: rgba(0, 0, 0, 0.85);
   @media (min-width: 992px){
     position: relative;
     display: block;
+    left: 0;
+    padding-top:0px;
     background-color:transparent;
-  } 
+  }
+  li{  
+    &:before{ 
+      display: none;
+    } 
+    .svg-inline--fa{
+      color:white;
+      width: 18px;
+      height: 18px;       
+    }    
+    a{
+      padding-left: 8px;
+      color: #fff;
+      font-family: "Open Sans", sans-serif;
+      font-size: 18px;
+      font-weight: 600;
+      text-decoration: underline;
+      @media (min-width: 992px){
+        color: #222222;
+      }
+      &:hover{
+        text-decoration: none;
+      }
+    }
+  }
 }
 
 .tab-profile{
-  padding:30px 0 20px 30px;
+  padding:20px;
     @media (min-width: 992px){
       display: none;
     }     
@@ -119,33 +146,7 @@ input[type="radio"][name="tabs"] {
     height: 100vh;
   }
 
-.header-admin__nav{  
-  margin-top: 40px;  
-  li{  
-    &:before{ 
-      display: none;
-    } 
-    .svg-inline--fa{
-      color:white;
-      width: 18px;
-      height: 18px;       
-    }    
-    a{
-      padding-left: 8px;
-      color: #fff;
-      font-family: "Open Sans", sans-serif;
-      font-size: 18px;
-      font-weight: 600;
-      text-decoration: underline;
-      @media (min-width: 992px){
-        color: #222222;
-      }
-      &:hover{
-        text-decoration: none;
-      }
-    }
-  }
-}
+
 
 #tab2-content{
   @media (min-width: 992px){

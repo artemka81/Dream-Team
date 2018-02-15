@@ -1,0 +1,75 @@
+{
+    "menu": {        
+        "user": [
+          {
+            "href": "/",
+            "linkName": "Главная"
+          },
+          {
+            "href": "/about.html",
+            "linkName": "Обо мне"
+          },
+          {
+            "href": "/works.html",
+            "linkName": "Работы"
+          },
+          {
+            "href": "/blog.html",
+            "linkName": "Блог"
+          },
+          {
+            "href": "/contact.html",
+            "linkName": "Контакты"
+          }
+        ],
+        "admin": [
+          {
+            "href": "/post-edit.html",
+            "linkName": "Пост",
+            "classIcon": "plus-circle"
+          },
+          {
+            "href": "/about-edit.html",
+            "linkName": "Обо мне",
+            "classIcon": "edit"
+          },
+          {
+            "href": "/work-edit.html",
+            "linkName": "Работа",
+            "classIcon": "plus-circle"
+          },
+          {
+            "href": "/contact-edit.html",
+            "linkName": "Контакты",
+            "classIcon": "edit"
+          },
+          {
+            "href": "/message-edit.html",
+            "linkName": "Сообщения",
+            "classIcon": "envelope"
+          }
+        ],
+        "icon": [
+          {
+            "href": "https://vk.com",
+            "className": "vk"
+          },
+          {
+            "href": "https://twitter.com/",
+            "className": "twitter"
+          },
+          {
+            "href": "https://www.youtube.com/",
+            "className": "youtube-square"
+          },
+          {
+            "href": "https://www.instagram.com/",
+            "className": "instagram"
+          },
+          {
+            "href": "https://www.facebook.com/",
+            "className": "facebook-f"
+          }
+        ]
+    }
+}

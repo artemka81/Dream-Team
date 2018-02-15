@@ -16,16 +16,22 @@
   <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
 </head>
 <body class="ui-header-admin">
-  <div class="header-helper">
-    <nav Class="header-user__nav">
-      <ul>
-        <li><a href="/">Главная</a></li>
-        <li><a href="/about.html">Обо мне</a></li>
-        <li><a href="/works.html">Работы</a></li>
-        <li><a href="/blog.html">Блог</a></li>
-        <li><a href="/contact.html">Контакты</a></li>
+  <div class="nav-admin">
+    <div class="avatar avatar-small"><img src="img/avatar-img/photo-small.jpg" alt=""/></div>
+    <div class="admin-profile">   
+      <div class="admin-profile__name">Юрий Ключевский</div><a class="btn btn--admin" href="#">Администратор</a>
+    </div>
+    <nav>
+      <ul class="admin-menu">
+        <li><i class="fas fa-plus-circle"></i><a href="/post-edit.html">Пост</a></li>
+        <li><i class="fas fa-edit"></i><a href="/about-edit.html">Обо мне</a></li>
+        <li><i class="fas fa-plus-circle"></i><a href="/work-edit.html">Работа</a></li>
+        <li><i class="fas fa-edit"></i><a href="/contact-edit.html">Контакты</a></li>
+        <li><i class="fas fa-envelope"></i><a href="/message-edit.html">Сообщения</a></li>
       </ul>
     </nav>
+  </div>
+  <div class="header-helper">
     <div class="header-user">
       <div class="header-user__content">
         <div class="header-user__mobile-bar" id="navigation-toggle">
@@ -71,7 +77,7 @@
           <div class="menu-admin">
             <div class="tab-profile">
               <div class="avatar avatar-small"><img src="img/avatar-img/photo-small.jpg" alt="Админ"/></div>
-              <div class="tab-profile__name">Юрий Ключевский</div><a class="button button-edit" href="#">Администратор </a>
+              <div class="tab-profile__name">Юрий Ключевский</div><a class="btn btn--admin" href="#">Администратор</a>
             </div>
             <div class="tab-wrap">
               <input type="radio" name="tabs" id="tab1" checked="checked"/>
@@ -90,13 +96,13 @@
               <input type="radio" name="tabs" id="tab2"/>
               <div class="tab-label-content" id="tab2-content">
                 <label for="tab2">Админка</label>
-                <nav Class="header-admin__nav">
+                <nav Class="menu-admin">
                   <ul>
-                    <li><span class="fas fa-plus-circle"></span><a href="/post-edit.html">Пост</a></li>
-                    <li><span class="fas fa-edit"></span><a href="/about-edit.html">Обо мне</a></li>
-                    <li><span class="fas fa-plus-circle"></span><a href="/work-edit.html">Работа</a></li>
-                    <li><span class="fas fa-edit"></span><a href="/contact-edit.html">Контакты</a></li>
-                    <li><span class="fas fa-envelope"></span><a href="/message-edit.html">Сообщения</a></li>
+                    <li><i class="fas fa-plus-circle"></i><a href="/post-edit.html">Пост</a></li>
+                    <li><i class="fas fa-edit"></i><a href="/about-edit.html">Обо мне</a></li>
+                    <li><i class="fas fa-plus-circle"></i><a href="/work-edit.html">Работа</a></li>
+                    <li><i class="fas fa-edit"></i><a href="/contact-edit.html">Контакты</a></li>
+                    <li><i class="fas fa-envelope"></i><a href="/message-edit.html">Сообщения</a></li>
                   </ul>
                 </nav>
               </div>
@@ -104,8 +110,7 @@
           </div>
         </div>
       </div>
-    </div><br/><br/><br/>
-    <p>Каждое мобильное меню хорошо работает только по отдельности, здесь так как 2 блока с одинаковыми js настройками сработает только первое меню.</p><br/><br/><br/>
+    </div>
   </div><!-- build:jsLibs js/libs.js -->
   <script src="libs/jquery/jquery.min.js"></script><!-- endbuild -->
 <!-- build:jsVendor js/vendor.js --><!-- endbuild -->
