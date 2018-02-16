@@ -7,10 +7,9 @@
   height: 100vh;
   display: flex;
   flex-direction: column;
-  position: absolute;
+  position: absolute;  
   top: 0;
-  left: 0;
-  padding-top:40px;   
+  left: 0;     
   background-color: rgba(0, 0, 0, 0.85);
   @media (min-width: 992px){
     position: relative;
@@ -46,7 +45,7 @@
 }
 
 .tab-profile{
-  padding:20px;
+  padding:30px;  
     @media (min-width: 992px){
       display: none;
     }     
@@ -121,6 +120,11 @@ input[type="radio"][name="tabs"] {
       }
       nav{      
         display: block;        
+        padding-top: 40px;
+        padding-left:20px;
+        @media (min-width: 992px){
+            padding: 0;
+        } 
         ul{          
           display: flex;
           flex-direction: column;
