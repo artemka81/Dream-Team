@@ -56,7 +56,8 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 	border-radius:50%;
-	margin: 20px;
+  margin: 20px;
+  z-index: 1;
 	&-big{		
 		width: 205px;
 		height: 205px;

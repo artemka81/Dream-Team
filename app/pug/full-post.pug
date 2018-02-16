@@ -18,11 +18,11 @@ block content
 		.row
 			.col
 			.col-10
-				.comment__title Оставить комментарий
-				.comment
+				.comment-post__title Оставить комментарий
+				.comment-post
 					+avatar('small','img/avatar-img/photo-small.jpg','')
-					.comment__author Юрий Ключевский
-					.comment__form
+					.comment-post__author Юрий Ключевский
+					.comment-post__form
 						+error('comment','Комментарий не может быть пустым.')
 						textarea( class="form-message" name="Message" placeholder="Присоединиться к обсуждению...")
 						+button('Опубликовать','#')
