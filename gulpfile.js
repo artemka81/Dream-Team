@@ -79,7 +79,8 @@ gulp.task('styles', function() {
 gulp.task('pug', function() {
   return gulp.src('./app/pug/*.pug')
   .pipe(data(function (file) {
-    return JSON.parse(fs.readFileSync('./app/date/menu.json'))
+		return JSON.parse(fs.readFileSync('./app/date/menu.json'))
+		
   }))
 	.pipe(plumber({
 		errorHandler: notify.onError(function(err){
