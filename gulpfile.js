@@ -9,6 +9,8 @@ var autoprefixer = require('gulp-autoprefixer');
 var del = require('del');
 var runSequence = require('run-sequence');
 var watch = require('gulp-watch');
+var data = require('gulp-data');
+var fs = require('fs');
 
 // SVG sprites
 var svgmin = require('gulp-svgmin');
@@ -75,7 +77,11 @@ gulp.task('styles', function() {
 });
 
 gulp.task('pug', function() {
-	return gulp.src('./app/pug/*.pug')
+  return gulp.src('./app/pug/*.pug')
+  .pipe(data(function (file) {
+		return JSON.parse(fs.readFileSync('./app/date/menu.json'))
+		
+  }))
 	.pipe(plumber({
 		errorHandler: notify.onError(function(err){
 			return {

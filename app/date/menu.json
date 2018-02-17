@@ -1,0 +1,132 @@
+{
+  "menu": {
+    "user": [
+      {
+        "href": "/",
+        "linkName": "Главная"
+      },
+      {
+        "href": "/about.html",
+        "linkName": "Обо мне"
+      },
+      {
+        "href": "/works.html",
+        "linkName": "Работы"
+      },
+      {
+        "href": "/blog.html",
+        "linkName": "Блог"
+      },
+      {
+        "href": "/contact.html",
+        "linkName": "Контакты"
+      }
+    ],
+    "admin": [
+      {
+        "href": "/post-edit.html",
+        "linkName": "Пост",
+        "classIcon": "plus-circle"
+      },
+      {
+        "href": "/about-edit.html",
+        "linkName": "Обо мне",
+        "classIcon": "edit"
+      },
+      {
+        "href": "/work-edit.html",
+        "linkName": "Работа",
+        "classIcon": "plus-circle"
+      },
+      {
+        "href": "/contact-edit.html",
+        "linkName": "Контакты",
+        "classIcon": "edit"
+      },
+      {
+        "href": "/message-edit.html",
+        "linkName": "Сообщения",
+        "classIcon": "envelope"
+      }
+    ],
+    "icon": [
+      {
+        "href": "https://vk.com",
+        "className": "vk"
+      },
+      {
+        "href": "https://twitter.com/",
+        "className": "twitter"
+      },
+      {
+        "href": "https://www.youtube.com/",
+        "className": "youtube-square"
+      },
+      {
+        "href": "https://www.instagram.com/",
+        "className": "instagram"
+      },
+      {
+        "href": "https://www.facebook.com/",
+        "className": "facebook-f"
+      }
+    ],
+    "fly": [
+      {
+        "direct": true,
+        "flyIn": "Москва",
+        "flyOut": "Калуга",
+        "flyOutCountry": "Россия",
+        "img": "https://static.city.travel/spec/275/KLF.jpg",
+        "popul": false,
+        "price": 1734,
+        "test": null,
+        "url": "https://new.city.travel/to/city/KLF/OW/0/0/0?from=MOW&utm_source=city.travel&utm_medium=email&utm_campaign=promo-17-02&utm_content=MOW&partner=email"
+      },
+      {
+        "direct": true,
+        "flyIn": "Москва",
+        "flyOut": "Саранск",
+        "flyOutCountry": "Россия",
+        "img": "https://static.city.travel/spec/275/SKX.jpg",
+        "popul": false,
+        "price": 1829,
+        "test": null,
+        "url": "https://new.city.travel/to/city/SKX/OW/0/0/0?from=MOW&utm_source=city.travel&utm_medium=email&utm_campaign=promo-17-02&utm_content=MOW&partner=email"
+      },
+      {
+        "direct": true,
+        "flyIn": "Москва",
+        "flyOut": "Краснодар",
+        "flyOutCountry": "Россия",
+        "img": "https://static.city.travel/spec/275/KRR.jpg",
+        "popul": false,
+        "price": 2032,
+        "test": null,
+        "url": "https://new.city.travel/to/city/KRR/OW/0/0/0?from=MOW&utm_source=city.travel&utm_medium=email&utm_campaign=promo-17-02&utm_content=MOW&partner=email"
+      },
+      {
+        "direct": true,
+        "flyIn": "Москва",
+        "flyOut": "Набережные Челны",
+        "flyOutCountry": "Россия",
+        "img": "https://static.city.travel/spec/275/NBC.jpg",
+        "popul": false,
+        "price": 2051,
+        "test": null,
+        "url": "https://new.city.travel/to/city/NBC/OW/0/0/0?from=MOW&utm_source=city.travel&utm_medium=email&utm_campaign=promo-17-02&utm_content=MOW&partner=email"
+      },
+      {
+        "direct": true,
+        "flyIn": "Москва",
+        "flyOut": "Нижний Новгород",
+        "flyOutCountry": "Россия",
+        "img": "https://static.city.travel/spec/275/GOJ.jpg",
+        "popul": false,
+        "price": 2155,
+        "test": null,
+        "url": "https://new.city.travel/to/city/GOJ/OW/0/0/0?from=MOW&utm_source=city.travel&utm_medium=email&utm_campaign=promo-17-02&utm_content=MOW&partner=email"
+      }
+    ]
+  }
+}

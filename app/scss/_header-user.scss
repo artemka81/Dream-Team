@@ -75,7 +75,7 @@ $color-mobile-login-text: #FFE400;
 		}
 	}
 	p{
-		padding: 12px 0;
+		padding: 4px 0 0 0;
 		margin: 0;
 		color: $color-header-text;
 		font-family: $header-font;
@@ -91,7 +91,8 @@ $color-mobile-login-text: #FFE400;
 	width: 100%;
 	display: flex;
 	@media (min-width: 992px){
-		width: 50%;
+		/* width: 50%; */
+		flex:1;
 	}
 }
 .header-user__logo{
@@ -221,6 +222,7 @@ $color-mobile-login-text: #FFE400;
 		// display: block;
 		@media (min-width: 992px){
 			display: block;
+			width: 100%;
 		}		
 }
 .header-user__nav{
@@ -352,6 +354,7 @@ $color-mobile-login-text: #FFE400;
 		color: #A3A4A5;
 		font-family: $header-font;
 		font-size: 13px;
+		line-height: 1;
 		font-weight: 500;
 		@media (min-width: 992px){
 			color: $color-header-desc;
