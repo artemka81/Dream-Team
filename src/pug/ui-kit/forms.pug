@@ -1,0 +1,24 @@
+extends ../layouts/ui-layout.pug
+
+block variables
+ -var textMessage = "Парк находится в горах Сьерра-Невада на востоке штата Калифорния и занимает огромную даже для Америки площадь, около 3000 кв. км. На этой площади расположены гранитные скальные стены огромной высоты, которыми, собственно, в первую очередь и знаменит парк, водопады, среди которых одни из самых высоких в США, три рощи гигантской секвойи — самого долгоживущего в мире дерева и самого большого по диаметру ствола, а также масса рек, озёр, лесов и лугов. "
+
+block content
+    section
+        p.p Поле для ввода
+        +formTText('form-name','YourName','Введите имя')
+    section
+        p.p Поле на всю ширину
+        +formTText('form-full-width','FullWidth','Поле на всю ширину')
+    section
+        p.p Сообщение - Textarea
+        textarea( class="form-message" name="Message" placeholder="Сообщение") #{textMessage}
+    section
+        +btnUpload('Изображение jpg или png, размером больше чем 100х100 пикселей, и весом до 2Мб.','file',true)
+    section
+        +btnUpload('Изображение jpg или png, рекомендуемая ширина 945px и больше, высота от 400px и более, вес до 2Мб.','file2',false)
+                    
+      
+
+block scripts
+    //- script(src="js/fileReader.js")

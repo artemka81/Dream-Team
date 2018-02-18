@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+<head>
+  <meta charset="UTF-8"/>
+  <title>Данные из JSON файла</title><!--[if IE]>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/><![endif]-->
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <meta name="keywords" content=""/>
+  <meta name="description" content=""/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap-reboot.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/><!-- build:cssVendor css/vendor.css -->
+  <link rel="stylesheet" href="/libs/bootstrap-4-grid/grid.min.css"/><!-- endbuild -->
+<!-- build:cssCustom css/main.css -->
+  <link rel="stylesheet" href="/css/main.css"/><!-- endbuild -->
+<!--[if lt IE 9]>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
+</head>
+<body class="footer-page">
+  <section class="json"> 
+    <div class="container">
+      <div class="row">
+        <div class="col"></div>
+        <div class="col-10">
+          <h1>Данные из JSON файла</h1>
+          <p>Всем кто хочет попрактиковаться в работе с данными из json, я подготовил шаблон этой странице. В проекте я добавил json-файл с направлениями авиаперелетов перелетов (app/date/menu.json). </p>
+          <p>Вам нужно:</p>
+          <ol>
+            <li> <b>Подключение</b>
+              <p>В сборку этого проекта уже подключен плагин <a href="https://www.npmjs.com/package/gulp-data">"gulp-data" </a>который подключает файл с данными и плагин fs который преоразовывает json в массив. В файле конфигурации проекта gulpfile.js уже подключен json файл в таксе "pug".<br/></p>
+            </li>
+            <li><b>Выводим данные в шаблон</b>
+              <p>Данные из файла находяться в глобальной области видимости, поэтому вы можете обращаться к данным из любого файла в проекте. Например, что бы получить количество авианаправлений из файла, можно так <i>#{menu.fly.length} </i></p>
+              <p>Кол-во направлений — <i class="json__date">5</i></p>
+              <p>Первое направление в списке <i>#{menu.fly[0].flyIn} - #{menu.fly[0].flyOut} - Цена билета #{menu.fly[0].price}</i></p>
+              <p class="json__date">Москва - Калуга - Цена билета 1734								</p>
+            </li>
+            <li> <b>Выводим данные в шаблон</b>
+              <p>Задание вывести в цикле все направления в нашем шаблоне "card" подставляя данные из json файла		 					</p>
+            </li>
+          </ol>
+        </div>
+        <div class="col"></div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-xl-4">
+          <div class="card card-post"><img class="card__img card-post__img" src="https://static.city.travel/spec/275/KLF.jpg"/>
+            <h2 class="card__title">Москва-Калуга</h2>
+            <p>Цена: 1 734</p><a class="button button-regular" href="https://new.city.travel/to/city/KLF/OW/0/0/0?from=MOW&amp;utm_source=city.travel&amp;utm_medium=email&amp;utm_campaign=promo-17-02&amp;utm_content=MOW&amp;partner=email">Купить </a>
+          </div>
+        </div>
+        <div class="col-md-6 col-xl-4">
+          <div class="card card-post"><img class="card__img card-post__img" src="https://static.city.travel/spec/275/KLF.jpg"/>
+            <h2 class="card__title">Москва-Калуга</h2>
+            <p>Цена: 1 734</p><a class="button button-regular" href="https://new.city.travel/to/city/KLF/OW/0/0/0?from=MOW&amp;utm_source=city.travel&amp;utm_medium=email&amp;utm_campaign=promo-17-02&amp;utm_content=MOW&amp;partner=email">Купить </a>
+          </div>
+        </div>
+        <div class="col-md-6 col-xl-4">
+          <div class="card card-post"><img class="card__img card-post__img" src="https://static.city.travel/spec/275/KLF.jpg"/>
+            <h2 class="card__title">Москва-Калуга</h2>
+            <p>Цена: 1 734</p><a class="button button-regular" href="https://new.city.travel/to/city/KLF/OW/0/0/0?from=MOW&amp;utm_source=city.travel&amp;utm_medium=email&amp;utm_campaign=promo-17-02&amp;utm_content=MOW&amp;partner=email">Купить </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section><!-- build:jsLibs js/libs.js -->
+  <script src="/libs/jquery/jquery.min.js"></script><!-- endbuild -->
+<!-- build:jsVendor js/vendor.js --><!-- endbuild -->
+<!-- build:jsNavigation js/navigation.js -->
+  <script src="/js/navigation.js"></script><!-- endbuild -->
+<!-- build:jsMain js/main.js -->
+  <script src="/js/main.js"></script><!-- endbuild -->
+  <script defer="defer" src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+</body>
