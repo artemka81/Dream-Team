@@ -1,0 +1,126 @@
+@mixin btn-bg($bg) {
+  background: $bg;
+  &:hover {
+    background:darken($bg,8%);
+    text-decoration: none;
+    color: #fff;
+    transition: all 0.3s ease;
+  }
+  &:active {
+    background:darken($bg,25%);
+    text-decoration: none;
+    color: #fff;
+  } 
+}
+
+.btn{
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: .875em; //14px
+  padding:.625em 1.25em;
+  line-height: 1;
+  text-decoration: none;
+  color:#fff;  
+    &--admin{
+      @include btn-bg(#a0cce5);    
+    }
+}
+
+
+.button {
+	font-size: 16px;
+	font-weight: 600;
+	line-height: 1;
+	transition: 0.2s ease-in;
+	display: inline-block;
+	padding: 10px 30px;
+	margin: 10px 20px;
+	border: 2px solid $button-border-color;
+	border-radius: 25px;
+	background-color: $button-color-regular;
+	color: #037EC6;
+	text-decoration: none;
+	
+	&:hover, &:focus { 
+		background: $button-border-color; 
+		text-decoration: none;
+		cursor: pointer;
+		color: #037EC6;
+	}
+
+	&:active { 
+		background: #b4dff6; 
+		cursor: none;
+		text-decoration: none;
+		color: #037EC6;
+	}	
+}
+
+.button-regular {
+	background-color: $button-color-regular;
+}
+ 
+.button-delete {
+	color: $white;
+	background-color: $button-color-delete;
+	padding: 10px 20px;
+	border: none;
+	&:hover, &:focus { 
+		background: #e70c0c; 
+		color: $white; 
+	}
+	&:active { 
+		background: #990101; 
+		color: $white;
+	}
+}
+ 
+.button-save {
+	color: $white;
+	background-color: $button-color-save;
+	border: none;
+	&:hover, &:focus { 
+		background: #0094eb; 
+		color: $white; 
+	}
+	&:active { 
+		background: #0069a7; 
+		color: $white;
+	}
+}
+ 
+.button-edit {
+	color: $white;
+	background-color: $button-color-edit;
+	padding: 10px 20px;
+	border: none;
+	&:hover, &:focus { 
+		background: #ffcf3e;
+		color: $white; 
+	}
+	&:active { 
+		background: #f29a00;
+		color: $white; 
+	}
+}
+ 
+.button-login {
+	border: none;
+	box-shadow: 0px 6px 16px rgba(23, 50, 66, 0.75);
+	&:hover, &:focus { 
+		background: #037ec6; 
+		color: #FFF;
+	}
+	&:active { 
+		background: #006ba9; 
+		color: #FFF;
+		box-shadow: none;
+	}
+}
+
+.button__small-fa-icon {
+	font-size: 10px;
+	font-weight: 100;
+}

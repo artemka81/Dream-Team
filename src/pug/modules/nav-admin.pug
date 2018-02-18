@@ -1,0 +1,14 @@
+.nav-admin
+	+avatar('small','/img/avatar-img/photo-small.jpg','')
+	.admin-profile    
+		.admin-profile__name Юрий Ключевский
+		+btn('#','admin', 'Администратор')
+	nav
+		ul.admin-menu
+			each item in menu.admin
+				li
+						i(class="fas fa-" +item.classIcon)
+						a(href=item.href)=item.linkName
+	.admin-login
+		i(class="fas fa-sign-out-alt")
+		a(href="#") Выход

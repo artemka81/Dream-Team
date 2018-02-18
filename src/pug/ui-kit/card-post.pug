@@ -1,0 +1,31 @@
+extends ../layouts/ui-layout.pug
+
+block variables
+	- var title = 'Карточка — Пост и Портфолио'
+	- var pageClass = 'index-page'
+
+block content
+	.container
+			.row
+				.col-12
+					h1 Компоненты
+			.row
+				.col-12
+					h3 Карточки - Посты в блоге
+			.row
+				.col-md-6.col-xl-4
+					+card-post("/img/card_post.jpg","Поездка в New York пример  длинного названия поста ...","#")
+				.col-md-6.col-xl-4
+					+card-post("/img/card_post.jpg","Заголовок","#")
+				.col-md-6.col-xl-4
+					+card-post("/img/card_post.jpg","Поездка в New York пример  длинного названия поста ...","#")
+			.row
+				.col-12
+					h3 Карточки - Работы в портфолио
+			.row
+				.col-md-6.col-xl-4
+					+card-portfolio("/img/card_portfolio.jpg","Верстка Landing Page","#")
+				.col-md-6.col-xl-4
+					+card-portfolio("/img/card_portfolio.jpg","Верстка","#")
+				.col-md-6.col-xl-4
+					+card-portfolio("/img/card_portfolio.jpg","Верстка Landing Page","#")
