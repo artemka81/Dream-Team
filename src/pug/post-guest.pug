@@ -1,0 +1,33 @@
+extends ./layouts/main.pug
+
+block variables
+	- var title = 'Главная страница'
+	- var pageClass = 'index-page'
+
+block header
+	include ./modules/nav-admin.pug
+	include ./modules/header-admin.pug
+block content
+	.container
+		.row
+			.col
+			.col-10
+				+full-post
+			.col
+		.row
+			.col
+			.col-10
+				.comment-post__title Оставить комментарий
+				.comment-post
+					+avatar('small','/img/avatar-img/photo-small.jpg','')
+					.comment-post__author Юрий Ключевский
+					.comment-post__form
+						+error('comment','Комментарий не может быть пустым.')
+						textarea( class="form-message" name="Message" placeholder="Присоединиться к обсуждению...")
+						+button('Опубликовать','#')
+			.col
+
+				
+			
+	
+block scripts
