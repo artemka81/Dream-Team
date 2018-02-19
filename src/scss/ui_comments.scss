@@ -48,3 +48,59 @@
 		font-weight: 400;
 	}
 }
+
+.no-auth,.comment-user{  
+  background-color:$bg-comments-no-auth;
+}
+
+.no-auth{
+  padding: 50px 0;  
+  font-size: 20px;
+  line-height: 1.6;
+  text-align: center;
+  &__title{
+    a{
+      text-decoration: underline;
+      color:$blue;
+    }
+  }
+}
+
+.comment-user{
+  position: relative;
+  padding: 20px;
+  &__message{
+    margin-bottom: 20px;
+  }
+  &__date{
+    color:$color-date;
+    margin-bottom: 20px;
+  }
+  &__file{
+    font-weight: bold;
+    a{
+      font-weight: normal;
+      text-decoration: underline;
+      color:$blue;
+    }
+  }
+}
+
+.comment-user{
+  .button{
+    position: absolute;
+    top: 20px;
+    right: 0;
+  }
+}
+
+.comment-user-profile{
+  margin-bottom: 10px;
+  &__name{
+    font-size: 20px;
+    font-weight: bold;
+  }
+  &__email{
+     color:$blue;
+  }
+}

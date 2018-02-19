@@ -1,4 +1,5 @@
 .full-post{
+  padding: 70px 0 140px 0;
   margin-bottom: 40px;
   &__author, &__link, &__date{
     font-size: 14px;
@@ -18,6 +19,14 @@
     display:block;
     margin-top: 1.25rem;
     margin-bottom: 2.5rem;
+  }
+  &__next-prew{
+    padding: 20px 0 40px;
+    display: flex;
+    justify-content:space-between;
+    .button{
+      margin: 0;
+    }
   }
 }
 

@@ -5,4 +5,15 @@ block variables
 	- var pageClass = 'index-page'
 
 block content
-	include ../modules/comments
+	.container
+		.row
+			.col-12
+				include ../modules/comments
+		.row
+			.col-12
+				h2 Комментарий — Зарегистрироваться
+				include ../modules/comments-auth
+		.row
+			.col-12
+				h2 Сообщение от пользователя
+				include ../modules/comments-user
