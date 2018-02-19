@@ -9,7 +9,8 @@
   flex-direction: column;
   position: absolute;  
   top: 0;
-  left: 0;     
+  left: 0;  
+  z-index: 2;   
   background-color: rgba(0, 0, 0, 0.85);
   @media (min-width: 992px){
     position: relative;

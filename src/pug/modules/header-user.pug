@@ -1,0 +1,35 @@
+
+.header-user
+		.header-user__content
+			.header-user__mobile-bar(id="navigation-toggle")
+				.header-user__mobile-toggle
+					+icon('nav', 'nav-mod')
+				.header-user__mobile-close
+					+icon('close', 'close-mod')
+				p Открыть навигацию
+			.header-user__logo-brand
+				.header-user__logo
+					a(href="index.html")
+						+icon('plane', 'plane-mod')
+				a.header-user__brand(href="index.html")
+					.header-user__brandname
+						h1 Digital Lyfestyle
+					.header-user__brand-desc
+						p Сайт IT специалиста
+			.header-user__inner(id="navigation-login")
+				.header-user__inner-box
+						.header-user__inner-avatar
+							+avatar-user("/img/avatar-img/0001.jpg")
+						.header-user__inner-content-box
+							.header-user__inner-name-desc
+								h2 Емельян Казаков
+								p Пользователь
+							.header-user__inner-buttons-box
+								.header-user__inner-profile
+									form
+										+button('Профиль','#','header-user__inner-btn')
+								.header-user__inner-quit
+									form
+										+button('Выход','#','header-user__inner-btn')
+			.header-user__nav-box(id="navigation-menu")
+				+header-menu("header-user__nav header-user__nav--inner",menu)
