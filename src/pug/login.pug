@@ -1,52 +1,30 @@
-extends ./layouts/ui-layout.pug
+extends ./layouts/login_and_sign-up.pug
 
 block variables
 	- var title = 'Вход на сайт'
 	- var pageClass = 'login-page'
-block content
-	.login-page__container
-		.login-page__header
-			.header-user__logo-brand
-				.header-user__logo
-					a(href="index.html")
-						+icon('plane', 'plane-mod')
-				a.header-user__brand(href="index.html")
-					.header-user__brandname
-						h1 Digital Lyfestyle
-			.header-user__signup-form
-							form(action='/sign-up.html')
-								button Регистрация
+	- var top_menu_action = '/sign-up.html'
+	- var top_menu_name = 'Регистрация'
+	- var form_action = '/login.html'
+	- var form_title = 'Вход на сайт'
 
-		.login-page__form-container
-			form(action='/login.html').form-container
-				.form-title Вход на сайт
-				.error-massages#error-massages
-					+error('email','Введите email')
-					+error('password','Введите пароль')
-					+error_description('booked','booked','Данный email уже занят.')
-						p Используйте другой email чтобы создать новый аккаунт.
-						p Или воспользуйтесь 
-							a(href="#") восстановлением пароля
-							| , чтобы войти на сайт.
-
-					+error_description('enter','enter','Неверный email или пароль.')
-						p Введите верные данные для входа или воспользуйтесь 
-							a(href="#") восстановлением пароля
-							| , чтобы войти на сайт.
-				.form-fields
-					+formTText('form-full-width','email','E-mail')
-					+formTText('form-full-width','password','Пароль')
-				.additional-info
-					+checkbox('save-check__block','save-check','save-check','save-check')
-					a(href="#") Забыл пароль
-				+button('Войти','#','login')
+block errors
+	+error('email','Введите email')
+	+error('password','Введите пароль')
+	+error_description('enter','enter','Неверный email или пароль.')
+		p Введите верные данные для входа или воспользуйтесь 
+			a(href="#") восстановлением пароля
+			| , чтобы войти на сайт.
 
 
-		.login-page__footer
-			p.footer-copy © DreamTeam
-				br
-				|	Создано с 
-				i.fas.fa-heart 
-				|  в 
-				a.footer-link(href="http://webcademy.ru/" target="_blank") WebCademy.ru
-				|  в 2018 году
+block fields
+	+formTText('form-full-width','email','E-mail')
+	+formTText('form-full-width','password','Пароль')
+
+block add-info
+	.additional-info
+		+checkbox('save-check__block','save-check','save-check','save-check')
+		a(href="#") Забыл пароль
+
+block submit-button
+	+button('Войти','#','login')
