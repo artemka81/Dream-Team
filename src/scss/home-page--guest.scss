@@ -1,0 +1,83 @@
+/*section resume*/
+
+.resume-wrap{
+	padding-top: 80px;
+}
+.resume-avatar{
+	text-align: center;
+	.avatar{
+		margin: 0;
+	}
+}
+.resume-content{
+	.resume-content--text{
+		margin-bottom: 30px;
+		h1{
+			color: $blue;
+		}
+		h1,h3{
+			margin-bottom: 12px;
+		}
+		p{
+			line-height: 24px;
+		}
+	}
+	.resume-content--button{
+		margin-bottom: 40px;
+		@media(min-width: 768px){
+			margin-bottom: 80px;
+		}
+		.button-regular{
+			margin: 0;
+		}
+	}
+}
+
+
+/*section portfolio*/
+a.cards-link{
+	text-decoration: none;
+	border-bottom: 2px solid $textColor;
+	color: $textColor;
+	-webkit-transition: all 0.2s ease-in;
+	   -moz-transition: all 0.2s ease-in;
+	    -ms-transition: all 0.2s ease-in;
+	     -o-transition: all 0.2s ease-in;
+	        transition: all 0.2s ease-in;
+	&:focus,&:hover,&:active{
+		color:$yellow;
+		border-bottom: none;
+	}
+}
+.portfolio-title{
+	h1{
+		margin-bottom: 10px;
+	}
+}
+.portfolio-works{
+	margin-bottom: 30px;
+	@media(min-width: 768px){
+		margin-bottom: 65px;
+	}
+	.card{
+		width: 100%;
+	}
+}
+
+/*section blog*/
+
+.blog-title{
+	h1{
+		margin-bottom:20px;
+	}
+}
+.blog-cards{
+	margin-bottom: 60px;
+	@media(min-width: 768px){
+		margin-bottom: 100px;
+	}
+	.card{
+		width: 100%;
+	}
+}
+
