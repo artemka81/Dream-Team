@@ -1,0 +1,40 @@
+extends ./layouts/main.pug
+
+block variables
+	- var title = 'Отдельная страница поста (Пользователь)'
+	- var pageClass = 'index-page'
+
+block header
+	include ./modules/nav-admin.pug
+	include ./modules/header-admin.pug
+block content
+	.full-post
+		.container
+			.row
+				.col
+					+button('Добавить пост','#','edit')
+					h1 Блог вебразработчика
+			.row
+				.col-md-6.col-xl-4
+					+card-post("/img/card_post.jpg","Поездка в New York пример  длинного названия поста ...","#")
+				.col-md-6.col-xl-4
+					+card-post("/img/card_post.jpg","Заголовок","#")
+				.col-md-6.col-xl-4
+					+card-post("/img/card_post.jpg","Поездка в New York пример  длинного названия поста ...","#")
+				.col-md-6.col-xl-4
+					+card-post("/img/card_post.jpg","Поездка в New York пример  длинного названия поста ...","#")
+				.col-md-6.col-xl-4
+					+card-post("/img/card_post.jpg","Заголовок","#")
+				.col-md-6.col-xl-4
+					+card-post("/img/card_post.jpg","Поездка в New York пример  длинного названия поста ...","#")
+				.col-md-6.col-xl-4
+					+card-post("/img/card_post.jpg","Поездка в New York пример  длинного названия поста ...","#")
+				.col-md-6.col-xl-4
+					+card-post("/img/card_post.jpg","Заголовок","#")
+				.col-md-6.col-xl-4
+					+card-post("/img/card_post.jpg","Поездка в New York пример  длинного названия поста ...","#")
+
+				
+			
+	
+block scripts
