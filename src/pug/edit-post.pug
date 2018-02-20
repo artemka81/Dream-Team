@@ -1,0 +1,34 @@
+extends ./layouts/main.pug
+
+block variables
+	- var title = 'Отдельная страница поста (Пользователь)'
+	- var pageClass = 'post-admin'
+	- var textMessage = "Парк находится в горах Сьерра-Невада на востоке штата Калифорния и занимает огромную даже для Америки площадь, около 3000 кв. км. На этой площади расположены гранитные скальные стены огромной высоты, которыми, собственно, в первую очередь и знаменит парк, водопады, среди которых одни из самых высоких в США, три рощи гигантской секвойи — самого долгоживущего в мире дерева и самого большого по диаметру ствола, а также масса рек, озёр, лесов и лугов. "
+	
+block header
+	include ./modules/nav-admin.pug
+	include ./modules/header-admin.pug
+block content
+	.full-post
+		.container
+			.row
+				.col
+				.col-10
+					h1 Редактировать пост
+					section.add-post
+						.add-post__title Название
+						+formTText('form-full-width','FullWidth','Национальный парк Йосемити')
+					section.add-post
+						.add-post__title Изображение
+						+btnUpload('Изображение jpg или png, размером больше чем 100х100 пикселей, и весом до 2Мб.','file',false)
+					section.add-post
+						.add-post__title Содержание
+						textarea( class="form-message" name="Message" placeholder="Сообщение") #{textMessage}
+						+button('Сохранить','#','save')
+						+button('Отмена','#')
+				.col
+
+				
+			
+	
+block scripts

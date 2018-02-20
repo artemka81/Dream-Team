@@ -1,4 +1,4 @@
-.full-post{
+.full-post{  
   padding: 70px 0 140px 0;
   margin-bottom: 40px;
   &__author, &__link, &__date{
@@ -29,6 +29,14 @@
     }
   }
 }
+
+.full-post{
+ .button-edit{
+  float: right;
+   margin: 0;
+ }
+}
+
 
 .comment-post__title{
   font-size: 26px;
