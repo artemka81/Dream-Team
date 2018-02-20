@@ -1,0 +1,8 @@
+.comment-post__title Оставить комментарий
+.comment-post
+  +avatar('small','/img/avatar-img/photo-small.jpg','')
+  .comment-post__author Юрий Ключевский
+  .comment-post__form
+    +error('comment','Комментарий не может быть пустым.')
+    textarea( class="form-message" name="Message" placeholder="Присоединиться к обсуждению...")
+    +button('Опубликовать','#')
