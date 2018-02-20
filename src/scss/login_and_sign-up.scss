@@ -1,34 +1,71 @@
 .login-page {
-	background-image: url('../img/bg/login-page.jpg');
-	background-repeat: no-repeat;
-	background-size: cover;	
+    height: 100vh;
+	width: 100vw;
+	&:before{
+		z-index: -1;
+		background: url('../img/bg/login-page.jpg') 100% 100% no-repeat;
+		background-size: cover;	
+		background-position: center;
+		top: 0;
+	    left: 0;
+	    position: absolute;
+	    content: " ";
+	    height: 100vh;
+		width: 100vw;
+	}	
 }
 
-.login-page_container {
-	position: absolute;
-	top:0;
-	bottom:0;
-	right: 0;
-	left: 0;
-	padding: 45px 50px;
+.login-page__container {
+	height: 100vh;
+	width: 100vw;
 	padding-bottom: 0;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+	&:before{
+		z-index: -1;
+	    content: " ";
+	    position:absolute;
+	    top: 0;
+	    left: 0;
+	    width: 100%;
+	    height: 200px;
+		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,ffffff+100&1+0,0+98 */
+		background: -moz-linear-gradient(top, rgba(90,164,207,1) 0%, rgba(250,250,250,0) 98%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
+		background: -webkit-linear-gradient(top, rgba(90,164,207,1) 0%,rgba(250,250,250,0) 98%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(to bottom, rgba(90,164,207,1) 0%,rgba(250,250,250,0) 98%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5aa4cf', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */    
+	}
+	&:after{
+		z-index: -1;
+	    content: " ";
+	    position:absolute;
+	    bottom: 0;
+	    left: 0;
+	    width: 100%;
+	    height: 200px;
+		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+1,000000+100,000000+100&0+0,1+100 */
+		background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0.01) 1%, rgba(90,164,207,1) 100%); /* FF3.6-15 */
+		background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,0.01) 1%,rgba(90,164,207,1) 100%); /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,0.01) 1%,rgba(90,164,207,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#5aa4cf',GradientType=0 ); /* IE6-9 */
+	}
 }
 
-.login-page__header{
+.login-page__header {
+	width: 100vw;
+	padding: 45px 50px;
 	background: none;
-	padding:0;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+	
 	.header-user__signup-form {
-		margin-top: 45px;
+		margin-top: 0;
 	}
 	.header-user__signup-form form button {
 		color: #FFF;
-		&:hover, &:active {
+		&:hover, &:focus, &:active {
 			text-decoration: none;
 			color: #FFE400;
 			transition: 0.3s;
@@ -36,6 +73,10 @@
 	}
 	@media (min-width: 576px){
 		flex-direction: row;
+		justify-content: space-between;
+		.header-user__logo-brand {
+			max-width: 400px;
+		}
 		.header-user__signup-form {
 			margin: 0;
 		}
@@ -46,6 +87,12 @@
 	color: #FFF;
 	text-align: center;
 	margin-top: 20px;
+}
+
+.login-page__form-container{
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .form-container {
@@ -70,6 +117,7 @@
 
 .error-massages{
 	text-align: left;
+	display: none;
 }
 
 .form-fields {
@@ -102,8 +150,4 @@
 		margin-top: 20px;
 		margin-left: 20px;
 	}
-}
-
-.error-massages {
-	display: none;
 }
