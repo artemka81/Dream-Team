@@ -1,0 +1,47 @@
+extends layouts/main.pug
+
+
+block variables
+	- var title = 'Главная страница'
+	- var pageClass = 'Home-page'
+
+block header
+	include ./modules/nav-admin.pug
+	include ./modules/header-admin.pug
+block content
+	.container
+		div(class="row resume-wrap")
+			div(class='col-md-4 col-lg-3 resume-avatar')
+				+avatar('big','/img/avatar-img/photo-big.jpg','')
+			div(class='col-md-8 col-lg-9 resume-content')
+				.resume-content--text
+					h1 Емельян Казаков
+					p Я веб разработчик из Казани. Мне 28 лет. Занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+					p Этот сайт я сделал в рамках обучения в школе онлайн обучения WebCademy. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+					h3 Что я умею
+					p Меня привлекет Frontend разработка, это не только моя работа, но и хобби.Также знаком и могу решать не сложные задачи на Backend.
+					p Знаком и использую современный workflow, работаю с репозиториями git и сборкой проекта на gulp.
+				.resume-content--button
+					+button('Подробнее','#')
+	.line
+	.container
+		.portfolio-title
+			h1 Новые #[a(href="#" class="cards-link") работы]
+		div(class="row portfolio-works")
+			div(class="col-md-6 col-xl-4")
+				+card-portfolio("/img/cards/portfolio/portfolio_landing-page.jpg","Верстка Landing Page","#")
+			div(class="col-md-6 col-xl-4")
+				+card-portfolio("/img/cards/portfolio/develop_ui-elements.jpg","Верстка UI набора","#")
+			div(class="col-md-6 col-xl-4")
+				+card-portfolio("/img/cards/portfolio/internet-shops.jpg","Верстка интернет магазина","#")
+				
+	.container
+		.blog-title
+			h1 Новые записи в #[a(href="#" class="cards-link") блоге]
+		div(class="row blog-cards")
+			div(class="col-md-6 col-xl-4")
+				+card-post("/img/cards/blog/blog_new-york.jpg","Поездка в New York","#")
+			div(class="col-md-6 col-xl-4")
+				+card-post("/img/cards/blog/blog_naturals.jpg","Что я делал в долине","#")
+			div(class="col-md-6 col-xl-4")
+				+card-post("/img/cards/blog/blog_summer.jpg","Как я ходил в поход этим летом","#")

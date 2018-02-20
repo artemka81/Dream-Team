@@ -16,10 +16,10 @@
 
 
 
-
-
 /* blocks styles */
 @import 'ui-forms.scss';
-@import 'login_and_sign-up'
+@import 'login_and_sign-up';
 
 
+/*all pages styles*/
+@import "home-page--guest";
