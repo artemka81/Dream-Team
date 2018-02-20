@@ -52,7 +52,8 @@
 }
 
 .footer-icons{	
-		display: flex;
+    display: flex;
+    flex-wrap: wrap;
 		li{
 			list-style-type: none;
 			&:before{ display: none;}
