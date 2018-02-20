@@ -16,8 +16,6 @@
 
 
 
-
-
 /* blocks styles */
 @import 'base/fonts_style';
 @import 'helper.scss';
@@ -25,3 +23,5 @@
 @import 'ui-forms.scss';
 
 
+/*all pages styles*/
+@import "home-page--guest";
