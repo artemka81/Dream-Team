@@ -34,15 +34,19 @@ mixin btnUpload(title,id,bbool)
 
 mixin button(title,link,mod,icon)
 	- mod = mod || 'regular'
-	a(class="button button-" + mod, href=link) #{title} 
-		if icon
+	a(class="button button-" + mod, href=link) 
+		if icon == 'fa-arrow-left'
+			span.button__small-fa-icon
+				i(class="fas " + icon)
+		| #{title} 
+		if icon && icon != 'fa-arrow-left'
 			span.button__small-fa-icon
 				i(class="fas " + icon)
 
 //- btn-admin
 //-----------
 mixin btn(btnLink, btnClass, btnText) 
-	a(href=btnLink class='btn btn--'+btnClass)=btnText
+	a(href=btnLink, class='btn btn--'+btnClass)=btnText
 
 
 //- img avatar-user
@@ -101,12 +105,13 @@ mixin menu-admin(menu)
 mixin comment-info(avatar,user_name,date,text)
 	.comment
 		+avatar('small comment__avatar',avatar,user_name)
-		.comment__info
-			.comment__info__user_date
-				.comment__user_name #{user_name}
+		
+		.comment__info__user_date
+			.comment__user_name #{user_name}
+			.time_container
 				i.far.fa-clock
 				.comment__date #{date}
-			.comment__text #{text}
+		.comment__text #{text}
 			
 
 
