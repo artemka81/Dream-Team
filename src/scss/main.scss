@@ -17,12 +17,12 @@
 
 
 /* blocks styles */
-@import 'base/fonts_style';
-@import 'helper.scss';
-@import "ui_button.scss";
 @import 'ui-forms.scss';
+@import 'login_and_sign-up';
 
 
 /*all pages styles*/
 @import "home-page--guest";
 @import "work-page";
+@import "add-post";
+

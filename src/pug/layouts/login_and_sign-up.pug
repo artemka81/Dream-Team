@@ -1,0 +1,84 @@
+include ../mixins/_mixins.pug
+
+block variables
+
+<!DOCTYPE html>
+html(lang="en")
+head
+	meta(charset="UTF-8")
+	title #{title}
+	
+	<!--[if IE]>
+	meta(http-equiv='X-UA-Compatible', content="IE=edge")
+	<![endif]-->
+
+	meta(name="viewport" content="width=device-width,initial-scale=1")
+	
+	meta(name="keywords" content="")
+	meta(name="description" content="")
+	
+	link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap-reboot.min.css")
+	link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
+
+	<!-- build:cssVendor css/vendor.css -->
+	link(rel="stylesheet", href="/libs/bootstrap-4-grid/grid.min.css")
+	<!-- endbuild -->
+
+	<!-- build:cssCustom css/main.css -->
+	link(rel="stylesheet", href="/css/main.css")
+	<!-- endbuild -->
+
+
+	<!--[if lt IE 9]>
+	script(src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js")
+	
+	<![endif]-->
+	
+body(class=pageClass)
+	.login-page__container
+			.login-page__header
+				.header-user__logo-brand
+					.header-user__logo
+						a(href="index.html")
+							+icon('plane', 'plane-mod')
+					a.header-user__brand(href="index.html")
+						.header-user__brandname
+							h1 Digital Lyfestyle
+				.header-user__signup-form
+								form(action=top_menu_action)
+									button #{top_menu_name}
+
+			.login-page__form-container
+				form(action=form_action).form-container
+					.form-title #{form_title}
+					.error-massages#error-massages
+						block errors						
+					.form-fields
+						block fields
+					block add-info
+					block submit-button
+			.login-page__footer
+				p.footer-copy © DreamTeam
+					br
+					|	Создано с 
+					i.fas.fa-heart 
+					|  в 
+					a.footer-link(href="http://webcademy.ru/" target="_blank") WebCademy.ru
+					|  в 2018 году
+
+	<!-- build:jsLibs js/libs.js -->
+	script(src="/libs/jquery/jquery.min.js")
+	<!-- endbuild -->
+
+	<!-- build:jsVendor js/vendor.js -->
+	block scripts
+	<!-- endbuild -->
+
+	<!-- build:jsNavigation js/navigation.js -->
+	script(src="/js/navigation.js")
+	<!-- endbuild -->
+	
+	<!-- build:jsMain js/main.js -->
+	script(src="/js/main.js")
+	<!-- endbuild -->
+	script(defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js")
