@@ -27,14 +27,10 @@
             <h1>Digital Lyfestyle</h1>
           </div></a>
       </div>
-      <div class="header-user__signup-form">
-        <form action="/sign-up.html">
-          <button>Регистрация</button>
-        </form>
-      </div>
+      <div class="header-user__right-link"><a href="/sign-up.html">Регистрация</a></div>
     </div>
     <div class="login-page__form-container">
-      <form class="form-container" action="/login.html">
+      <form class="form-container" action="/login.html" id="form-validate">
         <div class="form-title">Вход на сайт</div>
         <div class="error-massages" id="error-massages">
           <div class="error-message error-message__email">Введите email</div>
@@ -46,7 +42,7 @@
             </div>
           </div>
         </div>
-        <div class="form-fields">
+        <div class="form-fields" id="form-fields">
           <input class="form-full-width" type="text" name="email" placeholder="E-mail"/>
           <input class="form-full-width" type="text" name="password" placeholder="Пароль"/>
         </div>
