@@ -5,6 +5,11 @@
 html, body{
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 400;
+	font-size: 16px;
+	a{
+		text-decoration: none;
+		color:$linkColor;
+	}
 }
 p {
 	font-size: 16px;
@@ -15,7 +20,6 @@ p {
 	a{
 	color: $linkColor;
 	text-decoration: none;
-	border-bottom: 1px solid $linkColor;
 	-webkit-transition: all 0.2s ease-in;
 	   -moz-transition: all 0.2s ease-in;
 	    -ms-transition: all 0.2s ease-in;
@@ -23,8 +27,6 @@ p {
 	        transition: all 0.2s ease-in;
 		&:hover,&:focus,&:active{
 			color: $yellow;
-			border-bottom: none;
-			text-decoration: none;
 		}
 	}
 }

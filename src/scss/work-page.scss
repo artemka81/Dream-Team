@@ -23,7 +23,7 @@
 	background-image: url('/img/bg/invidual-work-page-bg.jpg');
 	background-repeat: no-repeat;
 	background-position: center top;
-	background-size: auto;
+	background-size: 100% 100%;
 	@media(min-width: 768px){
 		background-size: 100% auto;
 	}
@@ -46,6 +46,7 @@
 	.work-title{
 		font-size: 36px;
 		font-weight: 800;
+		margin-bottom: 15px;
 	}
 	.work-information{
 	display: flex;
@@ -58,8 +59,9 @@
 		}
 		.work-location{
 			padding-right: 20px;
-			span{
-				color:$linkColor;
+			a{
+				color: $linkColor;
+				text-decoration: none;
 			}
 		}
 		.work-date-download{
@@ -74,4 +76,33 @@
 			}
 		}
 }
+.work-contant{
+	
+	.work-link-projects{
+		margin-bottom: 20px;
+		
+		a{
+			color:$linkColor;
+			border-bottom: 1px solid $linkColor;
+			text-decoration: underline;
+		}
+	}
 
+}
+.work-container-button{
+	padding-top: 5px;
+	margin-bottom: 35px;
+	display: flex;
+	justify-content: center;
+	-webkit-flex-wrap: wrap;
+	    -ms-flex-wrap: wrap;
+	        flex-wrap: wrap;
+	@media(min-width: 768px){
+		padding-top: 25px;
+		margin-bottom: 105px;
+		justify-content: space-between;
+	}
+	.button{
+		margin: 20px 0;
+	}
+}
