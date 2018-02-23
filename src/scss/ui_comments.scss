@@ -1,29 +1,27 @@
 .comment{
-	display: flex;
-	flex-direction: row;
-	align-items: flex-start;
 	background-color: #ECF0F3;
 	border-radius: 5px;
 	margin-bottom: 10px;
 	padding: 20px;
+	display:grid;
+  	grid-template-columns: auto 1fr;
+  	grid-gap:10px 20px;
+  	grid-row: 10px;
+  	grid-template-areas:
+    	"avatar author"
+     	"text text";
 	
 	&__avatar{
+		grid-area: avatar;
 		margin: 0;
-		margin-right: 20px;
 	}
 
-	&__info{
+	&__info__user_date{
+		grid-area: author;
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-start;
 		align-items: flex-start;
-	}
-
-	&__info__user_date{
-		display: flex;
-		flex-direction: row;
-		justify-content: flex-start;
-		align-items: center;
 		color: #9B9B9B;
 		margin-bottom: 5px;
 	}
@@ -35,6 +33,15 @@
 		margin-right: 20px;
 	}
 
+	.time_container {
+		margin-top: 10px;
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: center;
+		font-size: 18px;
+	}
+
 	&__date {
 		margin-left: 10px;
 		font-weight: 600;
@@ -44,8 +51,23 @@
 	}
 
 	&__text {
+		grid-area: text;
 		font-size: 16px;
 		font-weight: 400;
+	}
+
+	@media (min-width: 768px) {
+        grid-template-areas: 
+          	"avatar author"
+          	"avatar text";  
+          
+        &__info__user_date{
+			flex-direction: row;
+			align-items: center;
+		}
+		.time_container {
+			margin-top: 0;
+		}
 	}
 }
 
