@@ -17,7 +17,7 @@ $color: #222;
 @import 'base/fonts_style';
 @import 'helper.scss';
 @import "ui_button.scss";
-=======
+
 *{
 	box-sizing: border-box;
 }
@@ -36,4 +36,5 @@ body {
 }
 
 @import 'ui-forms.scss';
+@import 'contacts.scss';
 
