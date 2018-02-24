@@ -1,0 +1,33 @@
+extends ./layouts/main.pug
+
+block variables
+	- var title = 'Отдельная страница поста (Пользователь)'
+	- var pageClass = 'post-admin'
+	- var textMessage ='Введите город'
+block header
+	include ./modules/nav-admin.pug
+	include ./modules/header-admin.pug
+block content
+	.full-post
+		.container
+			.row
+				.col
+				.col-10
+					h1 Добавить пост
+					section.add-post
+						.add-post__title Название
+						+formTText('form-full-width','FullWidth','Введите имя')
+					section.add-post
+						.add-post__title Изображение
+						+btnUpload('Изображение jpg или png, размером больше чем 100х100 пикселей, и весом до 2Мб.','file',true)
+					section.add-post
+						.add-post__title Содержание
+						textarea( class="form-message" name="Message" placeholder="Сообщение") #{textMessage}
+						+button('Сохранить','#','save')
+						+button('Отмена','#')
+				.col
+
+				
+			
+	
+block scripts

@@ -1,0 +1,43 @@
+extends ../layouts/ui-layout.pug
+
+block variables
+	- var title = 'Главная страница'
+	- var pageClass = 'index-page'
+
+block content
+	ul
+		li
+			i.fas.fa-arrow-right
+			a(href="/ui-kit/json-template.html") Данные из JSON
+		li
+			i.fas.fa-arrow-right
+			a(href="/ui-kit/ui_buttons.html") UI-Button Кнопки
+		li
+			i.fas.fa-arrow-right
+			a(href="/ui-kit/typography.html") Типографика
+		li
+			i.fas.fa-arrow-right
+			a(href="/ui-kit/helpers.html") UI kit вспомогательные элементы
+		li
+			i.fas.fa-arrow-right
+			a(href="/ui-kit/forms.html") UI kit формы
+		li
+			i.fas.fa-arrow-right
+			a(href="/ui-kit/header-user.html") Шапка user
+		li
+			i.fas.fa-arrow-right
+			a(href="/ui-kit/header-admin.html") Шапка admin
+		li
+			i.fas.fa-arrow-right
+			a(href="/ui-kit/footer.html") Футер
+		li
+			i.fas.fa-arrow-right
+			a(href="/ui-kit/card-post.html") Карточка — Пост и Портфолио
+		li
+			i.fas.fa-arrow-right
+			a(href="/ui-kit/full-post.html") Блог и Оставить комментарий
+		li
+			i.fas.fa-arrow-right
+			a(href="/ui-kit/comm-sign-mess.html") 2 комментария и Зарегистрироваться и Сообщение от пользователя
+block scripts
+	script(defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js")

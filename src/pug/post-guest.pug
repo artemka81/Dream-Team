@@ -1,0 +1,25 @@
+extends ./layouts/main.pug
+
+block variables
+	- var title = 'Отдельная страница поста (Гость)'
+	- var pageClass = 'index-page'
+
+block header	
+	include ./modules/header-guest.pug
+block content
+	.full-post
+		.container
+			.row
+				.col
+				.col-10
+					include ./modules/full-post.pug
+					h2 2 комментария
+					+comment-info('/img/avatar-img/avatar_man.jpg','Джон До','05 Мая 2017 года в 15:45','Замечательный парк, обязательно отправлюсь туда этим летом.')
+					+comment-info('/img/avatar-img/avatar_woman.jpg','Джон До','05 Мая 2017 года в 15:45','Замечательный парк, обязательно отправлюсь туда этим летом.')
+					include ./modules/comments-auth
+				.col
+
+				
+			
+	
+block scripts

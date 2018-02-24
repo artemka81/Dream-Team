@@ -1,0 +1,181 @@
+
+
+mixin icon(name,mod)
+	- mod = mod || ''
+	svg(class="icon icon-" + name + ' ' + mod)
+		use(xlink:href="/img/sprite.svg#" + name)
+
+
+mixin formTText(className,name,pH)
+	input(class=className type="text" name=name placeholder=pH)
+
+mixin btnUpload(title,id,bbool)
+	if bbool
+		.form-download
+			.form-download__title #{title}
+			.form-download__container 
+				label.form-download__btn Выбрать файл
+					input(type="file" id=id name="file" style="display:none")
+				input( class="form-download__file-name" id="value" type="text" value='Файл не выбран' disabled)
+	else
+		.form-download
+			.form-download__title #{title}
+			.form-download__container 
+				label.form-download__btn 
+					span Выбрать файл
+					input(type="file" id=id name="file" style="display:none")
+				input( class="form-download__file-name" id="value" type="text" value='Файл не выбран' disabled)
+			.form-download__preview
+				.form-download__preview__container(id="output")
+					.form-download__preview__delete
+						a.testBtn Удалить
+					.form-download__image-container
+						img.form-download__image(src="/img/bg/yosemite-national-park2.png")
+
+mixin button(title,link,mod,icon)
+	- mod = mod || 'regular'
+	a(class="button button-" + mod, href=link) 
+		if icon == 'fa-arrow-left'
+			span.button__small-fa-icon
+				i(class="fas " + icon)
+		| #{title} 
+		if icon && icon != 'fa-arrow-left'
+			span.button__small-fa-icon
+				i(class="fas " + icon)
+
+//- btn-admin
+//-----------
+mixin btn(btnLink, btnClass, btnText) 
+	a(href=btnLink, class='btn btn--'+btnClass)=btnText
+
+
+//- img avatar-user
+//-------------
+mixin avatar-user(link)
+	.avatar-user__circle-border
+		img(src=link, alt="image")
+
+//- header-menu
+//-------------
+mixin header-menu(navClass)
+	if(navClass === 'header-user__nav')
+		nav(Class=navClass)
+			ul
+				each link in menu.user
+					li
+						a(href=link.href)=link.linkName
+	else
+		.menu-admin
+			.tab-profile
+				+avatar('small','/img/avatar-img/photo-small.jpg','Админ')
+				.tab-profile__name Юрий Ключевский
+				+btn('#','admin', 'Администратор')
+			.tab-wrap
+				input(type="radio" name="tabs" id="tab1" checked)
+				.tab-label-content#tab1-content
+					label(for="tab1") Страницы
+					nav.header-user__nav
+						+menu(menu.user)
+				input(type="radio" name="tabs" id="tab2")
+				.tab-label-content#tab2-content
+					label(for="tab2") Админка
+					nav(Class=navClass)
+						+menu-admin(menu.admin)
+						
+
+
+
+
+//-footer-menu
+//------------
+mixin menu(menu)
+	ul.menu
+		each link in menu
+			li
+				a(href=link.href)=link.linkName
+
+mixin menu-admin(menu)
+	ul
+		each item in menu
+			li
+				i(class="fas fa-" +item.classIcon)
+				a(href=item.href)=item.linkName
+
+
+mixin comment-info(avatar,user_name,date,text)
+	.comment
+		+avatar('small comment__avatar',avatar,user_name)
+		
+		.comment__info__user_date
+			.comment__user_name #{user_name}
+			.time_container
+				i.far.fa-clock
+				.comment__date #{date}
+		.comment__text #{text}
+			
+
+
+//- help-elements
+//---------------
+mixin error(nameClass,title_message)
+	div(class="error-message error-message__"+ nameClass)= title_message
+
+mixin error_description(nameClassblock,nameClass,title_message)
+	div(class="block-error block-error__"+ nameClassblock)
+		div(class="error-message error-message__"+ nameClass)= title_message
+		div(class="description-error")
+			if block
+				block
+
+mixin badge-element(title)
+	.badge-element= title
+
+mixin avatar(modifName,img,altName)
+	div(class="avatar avatar-" +modifName)
+		img(src= img,alt= altName)
+
+mixin checkbox(className,idName,name,forName)
+	div(class=className)
+		input(id=idName type="checkbox" name=name checked hidden)
+		label(for=forName) Запомнить меня
+
+			
+//- Mixins for cards
+//-------------
+
+mixin card(img_src,card_title,link,button_title,mod)
+	div(class="card card-" + mod)
+		img(class="card__img card-" + mod +"__img", src= img_src)
+		h2.card__title #{card_title}
+		+button(button_title,link)
+
+mixin card-post(img_src,card_title,link)
+	+card(img_src,card_title,link,"Читать","post")
+
+mixin card-portfolio(img_src,card_title,link)
+	+card(img_src,card_title,link,"Смотреть кейс","portfolio")
+
+//- End mixins for cards
+
+					
+//- full-post
+//-----------
+mixin full-post
+	.full-post
+		h1.full-post__title Национальный парк Йосемити
+		span.full-post__author Емельян Казаков
+		a.full-post__link(href="#") Путешествия
+		span.full-post__date 16 Марта 2017
+		a.full-post__link(href="#") 2 комментария
+		article
+			img.full-post__img(src="../img/posts/post-img.jpg", alt="Название картинки")
+			p Парк находится в горах 
+				a(href="") Сьерра-Невада 
+				| на востоке штата Калифорния и занимает огромную даже для Америки площадь, около 3000 кв. км. На этой площади расположены гранитные скальные стены огромной высоты, которыми, собственно, в первую очередь и знаменит парк, водопады, среди которых одни из самых высоких в США, три рощи гигантской секвойи — самого долгоживущего в мире дерева и самого большого по диаметру ствола, а также масса рек, озёр, лесов и лугов. 
+			p Центром парка является долина 
+				a(href="") Йосемити, 
+				| круглый год переполненная туристами, зато в большей части парка никаких туристов нет. Если вы хотите погулять по территории парка, к вашим услугам огромная разветвлённая система троп, по которым проложены маршруты длительностью от получаса до нескольких дней. Ко всем этим прелестям бесплатно прилагаются животные и птицы. Если, на ваше счастье, медведей вы скорее всего не увидите, то оленей или бурундуков увидите почти гарантированно, даже не обладая специальными навыками
+
+			
+
+

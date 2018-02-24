@@ -1,0 +1,39 @@
+/* variable */
+@import 'variable/variable';
+/* blocks styles */
+@import 'base/fonts_style';
+@import 'variable/variable';
+@import "ui_button";
+@import "header-user";
+@import "header-admin";
+@import "footer";
+@import "cards";
+@import "full-post";
+@import "nav-admin";
+@import 'helper.scss';
+
+@import "ui_button.scss";
+
+*{
+	box-sizing: border-box;
+}
+
+
+@import "ui_comments";
+@import "json-template";
+>>>>>>> develop:src/scss/main.scss
+
+
+
+/* blocks styles */
+@import 'ui-forms.scss';
+
+
+
+@import 'login_and_sign-up';
+
+
+/*all pages styles*/
+@import "home-page--guest";
+@import "add-post";
+@import 'contacts.scss';

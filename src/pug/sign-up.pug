@@ -1,0 +1,28 @@
+extends ./layouts/login_and_sign-up.pug
+
+block variables
+	- var title = 'Регистрация на сайте'
+	- var pageClass = 'login-page'
+	- var top_menu_action = '/login.html'
+	- var top_menu_name = 'Вход'
+	- var form_action = '/sign-up.html'
+	- var form_title = 'Регистрация'
+
+block errors
+	+error('email','Введите email')
+	+error('password','Введите пароль')
+	+error_description('booked','booked','Данный email уже занят.')
+		p Используйте другой email чтобы создать новый аккаунт.
+		p Или воспользуйтесь 
+			a(href="#") восстановлением пароля
+			| , чтобы войти на сайт.
+
+block fields
+	+formTText('form-full-width','email','E-mail')
+	+formTText('form-full-width','password','Пароль')
+
+block add-info
+	.additional-info
+
+block submit-button
+	+button('Регистрация','#','login')

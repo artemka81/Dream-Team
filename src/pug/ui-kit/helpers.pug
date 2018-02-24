@@ -1,0 +1,38 @@
+extends ../layouts/ui-layout.pug
+include ../mixins/_mixins.pug
+
+block variables
+	- var title = 'UI kit вспомагательные Элементы'
+	
+block content
+	.container
+		+error('email','Введите email')
+		+error('comment','Комментарий не может быть пустым.')
+
+		+error_description('booked','booked','Данный email уже занят.')
+			p Используйте другой email чтобы создать новый аккаунт.
+			p Или воспользуйтесь 
+				a(href="#") восстановлением пароля
+				| , чтобы войти на сайт.
+
+		+error_description('enter','enter','Неверный email или пароль.')
+			p Введите верные данные для входа или воспользуйтесь 
+				a(href="#") восстановлением пароля
+				| , чтобы войти на сайт.
+
+
+		+badge-element('Пользователь')
+		+avatar('big','/img/avatar-img/photo-big.jpg','')
+		+avatar('small','/img/avatar-img/photo-small.jpg','')
+		+avatar('big','если-фото-не-загружено','')
+		+avatar('small','если-фото-не-загружено','')
+		+checkbox('save-check__block','save-check','save-check','save-check')
+
+
+	
+
+
+			
+
+
+
