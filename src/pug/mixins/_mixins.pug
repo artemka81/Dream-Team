@@ -32,9 +32,9 @@ mixin btnUpload(title,id,bbool)
 					.form-download__image-container
 						img.form-download__image(src="/img/bg/yosemite-national-park2.png")
 
-mixin button(title,link,mod,icon)
+mixin button(title,link,mod,icon,id)
 	- mod = mod || 'regular'
-	a(class="button button-" + mod, href=link) 
+	a(class="button button-" + mod, id=id href=link) 
 		if icon == 'fa-arrow-left'
 			span.button__small-fa-icon
 				i(class="fas " + icon)

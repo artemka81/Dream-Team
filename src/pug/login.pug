@@ -9,12 +9,12 @@ block variables
 	- var form_title = 'Вход на сайт'
 
 block errors
-	+error('email','Введите email')
-	+error('password','Введите пароль')
-	+error_description('enter','enter','Неверный email или пароль.')
-		p Введите верные данные для входа или воспользуйтесь 
-			a(href="#") восстановлением пароля
-			| , чтобы войти на сайт.
+	//- +error('email','Введите email')
+	//- +error('password','Введите пароль')
+	//- +error_description('enter','enter','Неверный email или пароль.')
+	//- 	p Введите верные данные для входа или воспользуйтесь 
+	//- 		a(href="#") восстановлением пароля
+	//- 		| , чтобы войти на сайт.
 
 
 block fields
@@ -27,4 +27,4 @@ block add-info
 		a(href="#") Забыл пароль
 
 block submit-button
-	+button('Войти','#','login')
+	+button('Войти','#','login','','login')
