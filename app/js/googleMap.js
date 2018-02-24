@@ -12,7 +12,7 @@ function initMap(){
         isDraggable = true;
     }
 
-    const moscow = {lat:55.754765, lng: 37.620899};
+    const moscow = { lat:55.754765, lng: 37.620899 };
 
     const  map = new google.maps.Map(document.getElementById('map'),{
 

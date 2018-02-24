@@ -1,4 +1,4 @@
-extends layouts/ui-layout.pug
+extends layouts/main.pug
 
 block content
     include header-user.pug
@@ -35,7 +35,7 @@ block content
                     +formTText('form-name form-name-fullScreen','email','Введите Email')
                 .input-error-message
                     textarea( class="form-message" name="Message" placeholder="Сообщение")
-                h4.form_btn-up-wrap  Прикрепить файл
+                h5.form_btn-up-wrap  Прикрепить файл
                 +btnUpload('jpg, png, pdf, doc, весом до 2Мб.','file',true)
                 div.form_submit-button
                     +button('Отправить','#','save')
