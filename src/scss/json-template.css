@@ -1,0 +1,23 @@
+.json {
+  max-width: 100%;
+  margin-bottom: 40px;
+}
+
+.json li {
+  margin-bottom: 20px;
+}
+
+.json p {
+  line-height: 1.5;
+}
+
+.json__date {
+  display: inline;
+  padding: 4px 8px;
+  border: 1px solid tomato;
+}
+
+.json .card {
+  height: auto;
+}
+/*# sourceMappingURL=json-template.css.map */

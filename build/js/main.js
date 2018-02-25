@@ -1,69 +1,75 @@
 
+/* Валидация форм */
 $(document).ready(function() {
-  (function(){
-    var validation = {
-      isValid: true,
-      
-      init: function(){
-        // Вызов всех функций модуля
-        this.setUpListeners();
+    // Анонимная самовызывающая функция
+    (function(){
+      var formValidation = {
+        //Глобальные переменные для модуля
+        isValue: true,
 
-      },
-      
-      setUpListeners: function(){
-        // Прослушка событий (нажатие кнопки) 
-        $('#login').on('click', validation.formValidate);
-      },
-
-      // Валидация полей ввода
-      formValidate: function(e){
-        // Создаем переменные формы
-        var form   = $('#form-validate');
-        var inputs = form.find('input:text');
-        var valid = true;
-
-        // Проверяем все поля на заполненность
-        $.each(inputs, function(index, el){
-          var input = $(el);
-          var inputText = input.val().trim();
-          if (inputText === '') {
-            // Показываем ошибку 
-            validation.showError('Какой-то текст', 'error-message-www');
-          } else{
-            console.log(inputText);
-          }
-
-        });
-
-        e.preventDefault();
-        console.log($(this).text());  
-      },
-
-      // Валидация поля "email"
-      emailValidate: function(){
-         
-      },
-
-      // Формируем блок с ошибками
-      showError: function(message, className){
-        // Создание дива
-        var div = document.createElement("div");
-        // Добавление класса к диву
-        div.className = `error-message ${className}`;
-        // Добавление текста ошибки
-        div.append(message);
-        // Вставляем блок с ошибкой в DOM-элемент 
-        var wrapError = $('#wrap-error');
-        wrapError.append(div);
-
+        // Инициализация модуля
+        init: function(){
+          // Вызов внутренних функция
+          this.setUpListeners();
+        },
         
-        
-        
-      }
+        // Прослышка событий
+        setUpListeners: function (){
+          // Слушаем событие клик по ссылке отправить форму
+          $("#login").on("click", formValidation._validateForm);
+        },
 
-    };
-    // Инициализируем модуль
-    validation.init();
+        // Валидация полей ввода
+        _validateForm: function(e){
+          // Переменные для работы с формой
+          var form = $('#form-fields'),
+          inputs = form.find('input'),
+          errorMessage = $('.error-message'),
+          valid = true;
+          // Валидируем в цикле все значения полей input 
+          $.each(inputs, function(index, el){
+            var input = $(el);
+            var inputVal = $(el).val().trim();
+            var placeHolder = $(this).attr("placeholder").toLowerCase();
+            if (!inputVal) { 
+              errorMessage.remove();
+              formValidation._showMessage(`Введите ${placeHolder}`, 'error-message');
+            }  
+            inputs.on('click', function(){
+              $('.error-message').remove();              
+            })
+          });             
+            
 
-  }());
+          e.preventDefault();                    
+          
+        },
+
+        // Метод который показывает сообщение об ошибки
+        _showMessage: function(msg, className){
+          // Переменные для отображения блока с ошибками
+          var wrapError = $('#wrap-error');
+          // Вставляем блок с текстом ошибки
+          var divMessage = wrapError.append(`<div class="${className}">${msg}</div>`);                   
+        }        
+      };
+    
+      formValidation.init();
+    }());
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

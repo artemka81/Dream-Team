@@ -132,6 +132,16 @@
 	/* display: none; */
 }
 
+.success-message{
+  text-align: left;  
+	width: 100%;
+  background-color: #1B5E20;
+  margin: 20px 0;
+  padding: 15px;
+  color: #fff;
+  border-radius: 3px;
+}
+
 .form-fields {
 	display: flex;
 	flex-direction: column;
