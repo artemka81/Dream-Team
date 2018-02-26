@@ -129,10 +129,13 @@
 
 .error-massages{
 	text-align: left;
-	display: none;
+	& > div {
+		display: none;
+	}
 }
 
 .form-fields {
+	z-index: 10;
 	display: flex;
 	flex-direction: column;
 	margin: -10px 0;
