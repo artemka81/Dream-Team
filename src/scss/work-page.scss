@@ -1,8 +1,8 @@
 /*styles work-page--guest*/
 .portfolio-title--work-page{
-	padding-top: 30px;	
+	padding-top: 30px;
 	@media(min-width: 768px){
-		padding-top: 75px;
+		padding-top: 75px;		
 	}
 		h1{
 			margin-bottom: 20px;		
@@ -10,6 +10,15 @@
 				font-weight: 400;		
 			}
 		}
+	.portfolio-title--button{
+		text-align: center;
+		@media(min-width: 768px){
+		text-align: right;		
+	}
+		.button{
+			margin: 0 0 10px;
+		}
+	}	
 }
 .portfolio-works--work-page{
 	margin-bottom: 65px;
@@ -47,7 +56,7 @@
 		font-size: 36px;
 		font-weight: 800;
 		margin-bottom: 15px;
-	}
+	}	
 	.work-information{
 	display: flex;
 	-webkit-justify-content: flex-start;
@@ -63,11 +72,7 @@
 				color: $linkColor;
 				text-decoration: none;
 			}
-		}
-		.work-date-download{
-			
-		}		
-
+		}			
 	}
 	.work-project{
 		margin-bottom: 50px;
@@ -76,19 +81,17 @@
 			}
 		}
 }
-.work-contant{
-	
+.work-contant{	
 	.work-link-projects{
-		margin-bottom: 20px;
-		
+		margin-bottom: 20px;		
 		a{
 			color:$linkColor;
 			border-bottom: 1px solid $linkColor;
 			text-decoration: underline;
 		}
 	}
-
 }
+/*Styles admin*/
 .work-container-button{
 	padding-top: 5px;
 	margin-bottom: 35px;
@@ -105,4 +108,20 @@
 	.button{
 		margin: 20px 0;
 	}
+}
+.container-work-title{
+	
+	.button{
+		margin: 10px 0;
+	}
+}
+.work-add-admin{
+		padding-top: 70px;
+		margin-bottom: 35px;
+	}
+.add-work{
+	.form-message{
+		margin-bottom: 25px;
+	}
+	
 }

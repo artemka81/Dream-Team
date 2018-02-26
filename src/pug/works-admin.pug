@@ -1,0 +1,36 @@
+extends ./layouts/main.pug
+
+block variables
+	- var title = 'Работы (Гость)'
+	- var pageClass = 'works-page'
+
+block header	
+	include ./modules/nav-admin.pug
+	include ./modules/header-admin.pug
+block content
+	.wrap-works
+		.container
+			div(class="row portfolio-title portfolio-title--work-page")
+				div(class="col-lg-9 col-md-8")
+					h1 Работы #[span(class="portfolio-font--lighter") которые сделал я и моя команда]
+				div(class="col-lg-3 col-md-4 portfolio-title--button")
+					+button('Добавить работу','#','edit')
+			div(class="row portfolio-works portfolio-works--work-page")
+				div(class="col-md-6 col-xl-4")
+					+card-portfolio("/img/cards/portfolio/portfolio_landing-page.jpg","Верстка Landing Page","#")
+				div(class="col-md-6 col-xl-4")
+					+card-portfolio("/img/cards/portfolio/develop_ui-elements.jpg","Верстка UI набора","#")
+				div(class="col-md-6 col-xl-4")
+					+card-portfolio("/img/cards/portfolio/internet-shops.jpg","Верстка интернет магазина","#")
+				div(class="col-md-6 col-xl-4")
+					+card-portfolio("/img/cards/portfolio/portfolio_landing-page.jpg","Верстка Landing Page","#")
+				div(class="col-md-6 col-xl-4")
+					+card-portfolio("/img/cards/portfolio/develop_ui-elements.jpg","Верстка UI набора","#")
+				div(class="col-md-6 col-xl-4")
+					+card-portfolio("/img/cards/portfolio/internet-shops.jpg","Верстка интернет магазина","#")
+				div(class="col-md-6 col-xl-4")
+					+card-portfolio("/img/cards/portfolio/portfolio_landing-page.jpg","Верстка Landing Page","#")
+				div(class="col-md-6 col-xl-4")
+					+card-portfolio("/img/cards/portfolio/develop_ui-elements.jpg","Верстка UI набора","#")
+				div(class="col-md-6 col-xl-4")
+					+card-portfolio("/img/cards/portfolio/internet-shops.jpg","Верстка интернет магазина","#")
