@@ -7,7 +7,10 @@ mixin icon(name,mod)
 
 
 mixin formTText(className,name,pH)
-	input(class=className type="text" name=name placeholder=pH)
+	if name == 'password'
+		input(class=className type=name name=name placeholder=pH)
+	else 
+		input(class=className type="text" name=name placeholder=pH)
 
 mixin btnUpload(title,id,bbool)
 	if bbool
