@@ -30,46 +30,46 @@ block content
 				.col
 				.col-10
 					h2.about-block-title Технологии
-					section.add-scils
-						div.scil-field
+					section.add-skills
+						div.skill-field
 							.add-post__title HTML5
 							+formTText('form-scils','html-scils','50') 
 							<span> &#37;</span>
-						div.scil-field
+						div.skill-field
 							.add-post__title CSS3
 							+formTText('form-scils','css-scils','50') 
 							<span> &#37;</span>
-						div.scil-field
+						div.skill-field
 							.add-post__title JS
 							+formTText('form-scils','js-scils','50') 
 							<span> &#37;</span>
-						div.scil-field
+						div.skill-field
 							.add-post__title jQuery
 							+formTText('form-scils','jquery-scils','50') 
 							<span> &#37;</span>
-					section.add-scils
-						div.scil-field
+					section.add-skills
+						div.skill-field
 							.add-post__title PHP
 							+formTText('form-scils','php-scils','50') 
 							<span> &#37;</span>
-						div.scil-field
+						div.skill-field
 							.add-post__title MySql
 							+formTText('form-scils','mysql-scils','50') 
 							<span> &#37;</span>
-					section.add-scils
-						div.scil-field
+					section.add-skills
+						div.skill-field
 							.add-post__title Git
 							+formTText('form-scils','git-scils','50') 
 							<span> &#37;</span>
-						div.scil-field
+						div.skill-field
 							.add-post__title Gulp
 							+formTText('form-scils','gulp-scils','50') 
 							<span> &#37;</span>
-						div.scil-field
+						div.skill-field
 							.add-post__title Bower
 							+formTText('form-scils','bower-scils','50') 
 							<span> &#37;</span>
-						div.scil-field
+						div.skill-field
 							.add-post__title WebPack
 							+formTText('form-scils','webpack-scils','50') 
 							<span> &#37;</span>
@@ -78,13 +78,14 @@ block content
 				.col
 				.col-10
 					h2.about-block-title Опыт работы
-					.comment-user
-						+button('Удалить','#','delete')
-						.comment-user__date февраль 2017  — по настоящее время
-						.comment-user-profile
-							span.comment-user-profile__name Frontend разработчик, Вконтактe, mail.ru group
-						.comment-user__message
-							| Работы в команде Вконтакте. Работал в команде над обновление сервиса Музыка, работа над видео разделом. Создание видеоплеера. Создание кроссбраузерных компонентов. Работа над оптимизацией скорости загрузки медиа контента.
+					each item in menu.work
+						.work-item--admin
+							+button('Удалить','#','delete')
+							.work-item__date #{item.period}
+							.work-item-profile
+								span.work-item-profile__name #{item.position}
+							.work-item__message
+								| #{item.description}
 				.col
 			.row
 				.col

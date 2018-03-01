@@ -1,0 +1,16 @@
+extends layouts/main.pug
+
+
+block variables
+	- var title = 'Обо мне (Админ)'
+	- var pageClass = 'Home-page'
+	- var typePage = 'admin'
+
+block header
+	include ./modules/nav-admin.pug
+	include ./modules/header-admin.pug
+block content
+	include ./modules/about-content.pug
+block scripts
+	script(src="/js/circles/circles.min.js")
+	script(src="/js/skills-circles.js")

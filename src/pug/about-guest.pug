@@ -1,0 +1,16 @@
+extends layouts/main.pug
+
+
+block variables
+	- var title = 'Обо мне (Гость)'
+	- var pageClass = 'Home-page'
+	- var typePage = 'guest'
+
+block header
+	include ./modules/nav.pug
+	include ./modules/header-guest.pug
+block content
+	include ./modules/about-content.pug
+block scripts
+	script(src="/js/circles/circles.min.js")
+	script(src="/js/skills-circles.js")
