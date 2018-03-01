@@ -43,15 +43,20 @@
           </div>
         </div>
         <div class="form-fields" id="form-fields">
-          <input class="form-full-width" type="text" name="email" placeholder="E-mail"/>
-          <input class="form-full-width" type="text" name="password" placeholder="Пароль"/>
+          <div class="form-group form-full-email">
+            <input class="form-full-width " type="text" name="email" placeholder="E-mail"/>
+          </div>
+          <div class="form-group form-full-password">
+            <input class="form-full-width " type="text" name="password" placeholder="Пароль"/>
+          </div>
         </div>
         <div class="additional-info">
           <div class="save-check__block">
             <input id="save-check" type="checkbox" name="save-check" checked="checked" hidden="hidden"/>
             <label for="save-check">Запомнить меня</label>
           </div><a href="#">Забыл пароль</a>
-        </div><a class="button button-login" href="#"> Войти </a>
+        </div>
+        <input class="button button-login" type="submit" name="button" value="Войти"/>
       </form>
     </div>
     <div class="login-page__footer">
@@ -59,7 +64,9 @@
     </div>
   </div><!-- build:jsLibs js/libs.js -->
   <script src="/libs/jquery/jquery.min.js"></script><!-- endbuild -->
-<!-- build:jsVendor js/vendor.js --><!-- endbuild -->
+<!-- build:jsVendor js/vendor.js -->
+  <!-- Валидация форм-->
+  <script src="js/valid-form.js"></script><!-- endbuild -->
 <!-- build:jsNavigation js/navigation.js -->
   <script src="/js/navigation.js"></script><!-- endbuild -->
 <!-- build:jsMain js/main.js -->
