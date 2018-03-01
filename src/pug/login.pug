@@ -29,7 +29,8 @@ block add-info
 		a(href="#") Забыл пароль
 
 block submit-button
-	input(type="submit" name="button" class="button button-login" value="Войти")
+	//- input(type="button" name="button" class="button button-login" value="Войти")
+	+button('Войти','',mod,icon)
 
 block scripts
 	// Валидация форм

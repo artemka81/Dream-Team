@@ -1,5 +1,10 @@
 $(document).ready(function(){
 
+	// $('#span-send').on('click', function(){
+	// 	console.log('Span Click!');
+	// 	$('#form-validate').submit();
+	// });
+
 	(function(){
 
 		var formValidation = {
@@ -12,7 +17,7 @@ $(document).ready(function(){
 			},
 
 			_setUpListeners: function(){
-				$('#form-validate').on('submit', formValidation._validateForm);
+				$('#form-validate .button').on('click', formValidation._validateForm);
 			},
 
 			_validateForm: function(event){
@@ -33,13 +38,10 @@ $(document).ready(function(){
 						errorEmail = $('.error-message__email'),
 						errorPassword = $('.error-message__password');
 
-
 					if( value.length === 0){
-						
 						errorPassword.prependTo(formPassword);
 						errorEmail.prependTo(formEmail);
 						valid = false;						
-						
 					}
 
 					formEmail.on('keydown', function(){
@@ -53,6 +55,16 @@ $(document).ready(function(){
 				});
 
 				formValidation.isValid = valid;
+				console.log(valid);
+				console.log(formValidation.isValid);
+
+				if ( formValidation.isValid == true ) {
+					console.log('GOOD');
+					$('#form-validate').submit();
+				} else {
+					console.log('BAD');
+				}
+
 			},
 
 			_sendEmail: function(){
