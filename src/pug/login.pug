@@ -18,8 +18,10 @@ block errors
 
 
 block fields
-	+formTText('form-full-width','email','E-mail')
-	+formTText('form-full-width','password','Пароль')
+	div(class="form-group form-full-email")
+		+formTText('form-full-width ','email','E-mail')
+	div(class="form-group form-full-password")
+		+formTText('form-full-width ','password','Пароль')
 
 block add-info
 	.additional-info
@@ -27,4 +29,8 @@ block add-info
 		a(href="#") Забыл пароль
 
 block submit-button
-	+button('Войти','#','login')
+	input(type="submit" name="button" class="button button-login" value="Войти")
+
+block scripts
+	// Валидация форм
+	script(src='js/valid-form.js')
