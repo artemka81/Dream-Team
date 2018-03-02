@@ -5,6 +5,11 @@
 html, body{
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 400;
+	font-size: 16px;
+	a{
+		text-decoration: none;
+		color:$linkColor;
+	}
 }
 p {
 	font-size: 16px;
@@ -14,17 +19,26 @@ p {
 	margin-bottom: 10px;
 	a{
 	color: $linkColor;
+	text-decoration: none;
+	-webkit-transition: all 0.2s ease-in;
+	   -moz-transition: all 0.2s ease-in;
+	    -ms-transition: all 0.2s ease-in;
+	     -o-transition: all 0.2s ease-in;
+	        transition: all 0.2s ease-in;
+		&:hover,&:focus,&:active{
+			color: $yellow;
+		}
 	}
 }
 
-h1,h3,h4,h5,h6{
+.title1,.title3,.title4,.title5,.title6,h1,h3,h4,h5,h6{
 	font-weight: 800;
 	color: #222222;
 	padding: 0;
 	margin: 0;
 	margin-bottom: 20px;
 }
-h2{
+.title2,h2{
 	font-weight: 600;
 	font-size: 26px;
 	color: #383737;
@@ -32,19 +46,19 @@ h2{
 	margin-bottom: 20px;
 }
 
-h1{
+.title1,h1{
 	font-size: 28px;
 }
-h3{
+.title3,h3{
 	font-size: 24px;
 }
-h4{
+.title4,h4{
 	font-size: 20px;
 }
-h5{
+.title5,h5{
 	font-size: 18px;
 }
-h6{
+.title6,h6{
 	font-size: 16px;
 }
 
