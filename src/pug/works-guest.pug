@@ -1,0 +1,32 @@
+extends ./layouts/main.pug
+
+block variables
+	- var title = 'Работы (Гость)'
+	- var pageClass = 'works-page'
+
+block header	
+	include ./modules/header-guest.pug
+block content
+	.wrap-works
+		.container
+			div(class="portfolio-title portfolio-title--work-page")
+				h1 Работы #[span(class="portfolio-font--lighter") которые сделал я и моя команда]
+			div(class="row portfolio-works portfolio-works--work-page")
+				div(class="col-md-6 col-xl-4")
+					+card-portfolio("/img/cards/portfolio/portfolio_landing-page.jpg","Верстка Landing Page","#")
+				div(class="col-md-6 col-xl-4")
+					+card-portfolio("/img/cards/portfolio/develop_ui-elements.jpg","Верстка UI набора","#")
+				div(class="col-md-6 col-xl-4")
+					+card-portfolio("/img/cards/portfolio/internet-shops.jpg","Верстка интернет магазина","#")
+				div(class="col-md-6 col-xl-4")
+					+card-portfolio("/img/cards/portfolio/portfolio_landing-page.jpg","Верстка Landing Page","#")
+				div(class="col-md-6 col-xl-4")
+					+card-portfolio("/img/cards/portfolio/develop_ui-elements.jpg","Верстка UI набора","#")
+				div(class="col-md-6 col-xl-4")
+					+card-portfolio("/img/cards/portfolio/internet-shops.jpg","Верстка интернет магазина","#")
+				div(class="col-md-6 col-xl-4")
+					+card-portfolio("/img/cards/portfolio/portfolio_landing-page.jpg","Верстка Landing Page","#")
+				div(class="col-md-6 col-xl-4")
+					+card-portfolio("/img/cards/portfolio/develop_ui-elements.jpg","Верстка UI набора","#")
+				div(class="col-md-6 col-xl-4")
+					+card-portfolio("/img/cards/portfolio/internet-shops.jpg","Верстка интернет магазина","#")

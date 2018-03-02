@@ -1,0 +1,61 @@
+extends ./layouts/main.pug
+
+block variables
+	- var title = 'Работы (Гость)'
+	- var pageClass = 'work-user-individual'
+
+block header
+	include ./modules/nav.pug
+block content
+	.container-work-page--individual
+		.header-user__logo-brand
+			.header-user__logo
+				a(href="index.html")
+					+icon('plane', 'plane-mod')
+			a.header-user__brand(href="index.html")
+				.header-user__brandname
+					h1 Digital Lyfestyle
+				.header-user__brand-desc
+					p Сайт IT специалиста
+		.container
+			div(class="row justify-content-md-end container-work-title")
+				div(class="col-lg-9 col-md-8 work-wrap")
+					.work-title Верстка и frontend Интернет магазина
+				div(class="col-lg-2 col-md-3 work-wrap") 
+					+button('Редактировать','#','edit')
+			div(class="row justify-content-md-center")
+				div(class="col-md-10 work-wrap")
+					.work-information
+						.work-autor Емельян Казаков
+						.work-location 
+							a(href="#") Работы
+						.work-date-download 16 Марта 2018		
+					.work-project
+						img(src="img/cards/work-page/img-project.jpg")
+			div(class="row justify-content-md-center")
+				div(class="col-md-5 work-contant")
+					.title3 Кратко о проекте
+					p Сделана верстка и фронтэнд для интернет магазина мебели. Сверстано более 50-ти страниц. Сделаны все эффекты и интерактив. В работе использованы препроцессоры pug и less. Интерактив написан на JavaScript. Весь проект протестирован на своместимость, начиная с IE9. Для старых браузеров использован подход Graceful Degradation.
+					.title6 Время работы над проектом: 6 недель
+					.title6 Страниц сверстано: 52 страницы
+					.title6 Бюджет проекта: до 60 000 рублей
+					.title3 Результат
+					p Проект сделан в срок. Заказчик доволен. Сайт запущен, работает и уже радует покупками посетителей и владельцев бизнеса.
+				div(class="col-md-5 work-contant")
+					.title3 Технологии
+					ul(class='work-technology-list')
+						li(class='work-technology-list-item') HTML5, CSS3.
+						li(class='work-technology-list-item') JavaScript, jQuery.
+						li(class='work-technology-list-item') Less, Pug, Gulp, npm, bower.
+					.title3 Ссылка на проект
+					p(class="work-link-projects") #[a(href="http://magnum-store.ru") http://magnum-store.ru]
+					.title3 Код на github
+					p(class="work-link-projects") #[a(href="https://github.com/pozitive/magnumstore/") https://github.com/pozitive/magnumstore/]
+			div(class="row justify-content-md-center")
+				div(class="col-md-10 work-container-button")
+					+button('Все работы','#','regular','fa-arrow-left')
+					+button('Следующая работа ','#', 'regular','fa-arrow-right')
+
+				
+					
+					
