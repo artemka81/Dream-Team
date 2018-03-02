@@ -1,0 +1,16 @@
+{
+  "experiense": {
+    "skills": [
+      {
+        "skill": "HTML5"
+      },
+    ],
+    "work": [
+      {
+        "period": "февраль 2017  — по настоящее время",
+        "position": "Главная",
+        "description": "Главная"
+      },
+    ]
+  }
+}

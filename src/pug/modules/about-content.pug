@@ -1,0 +1,62 @@
+.container.about-resume
+	div(class="row resume-wrap")
+		div(class='col-md-4 col-lg-3 resume-avatar')
+			+avatar('big','/img/avatar-img/photo-big.jpg','')
+		div(class='col-md-8 col-lg-9 resume-content')
+			.resume-content--text
+				h1 Емельян Казаков
+				p Я веб разработчик из Казани. Мне 28 лет. Занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+				p Этот сайт я сделал в рамках обучения в школе онлайн обучения WebCademy. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+				h3 Что я умею
+				p Меня привлекет Frontend разработка, это не только моя работа, но и хобби.Также знаком и могу решать не сложные задачи на Backend.
+				p Знаком и использую современный workflow, работаю с репозиториями git и сборкой проекта на gulp.
+				if typePage == 'admin'
+					.about-button
+						+button('Редактировать','#','edit')
+
+
+.about-skills
+	.container
+		.row
+			.col-md-4.col-lg-3
+			.col-md-8.col-lg-9
+				.header_skills Технологии
+					p Которые использую в работе
+		.row.row--skills
+			.col-md-4.col-lg-3.d-flex
+				.skills_title.justify-content-center.align-self-center  Frontend
+			.col-md-8.col-lg-9
+				.about-skills-conteiner
+					.skills_frontend#skills_frontend
+						each item in menu.skills_frontend
+							<div class="circle" id="circles-#{item.skill}" data-name=#{item.skill} data-procent=#{item.procent}></div>
+		.row.row--skills
+			.col-md-4.col-lg-3.d-flex
+				.skills_title.justify-content-center.align-self-center  Backend
+			.col-md-8.col-lg-9
+				.about-skills-conteiner
+					.skills_backend#skills_backend
+						each item in menu.skills_backend
+							<div class="circle" id="circles-#{item.skill}" data-name=#{item.skill} data-procent=#{item.procent}></div>
+		.row.row--skills
+			.col-md-4.col-lg-3.d-flex
+				.skills_title.justify-content-center.align-self-center  Workflow
+			.col-md-8.col-lg-9
+				.about-skills-conteiner
+					.skills_workflow#skills_workflow
+						each item in menu.skills_workflow
+							<div class="circle" id="circles-#{item.skill}" data-name=#{item.skill} data-procent=#{item.procent}></div>
+	
+			
+.container.work-experience
+	.row
+		.col-md-4.col-lg-3
+		.col-md-8.col-lg-9
+			h1 Опыт работы
+			each item in menu.work
+				.work-item
+					.work-item__date #{item.period}
+					.work-item-profile
+						span.work-item-profile__name #{item.position}
+					.work-item__message
+						| #{item.description}
