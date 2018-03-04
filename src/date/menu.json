@@ -127,6 +127,69 @@
         "test": null,
         "url": "https://new.city.travel/to/city/GOJ/OW/0/0/0?from=MOW&utm_source=city.travel&utm_medium=email&utm_campaign=promo-17-02&utm_content=MOW&partner=email"
       }
+    ],
+    "work": [
+      {
+        "period": "февраль 2017  — по настоящее время",
+        "position": "Frontend разработчик, Вконтактe, mail.ru group",
+        "description": "Работы в команде Вконтакте. Работал в команде над обновление сервиса Музыка, работа над видео разделом. Создание видеоплеера. Создание кроссбраузерных компонентов. Работа над оптимизацией скорости загрузки медиа контента."
+      },
+      {
+        "period": "сентябрь 2015 — январь 2017",
+        "position": "Разработчик интерфейсов, Яндекс",
+        "description": "Работы в проекте Яндекс Музыка. Создание новых разделов сервиса. Оптимизация и создание новых компонентов платформы."
+      },
+      {
+        "period": "март 2013 — август 2015",
+        "position": "Веб-разработчик, Cloud studio",
+        "description": "Frontend и Backend для клиентских проектов студии. Работа над студийной CMS для интернет магазинов. Участие в разработке CRM системы “Sky CRM”. Стек используемых технологий: Git, JS, Angular."
+      }
+    ],
+    "skills_frontend": [
+      {
+        "skill": "HTML5",
+        "procent": 90
+      },
+      {
+        "skill": "CSS3",
+        "procent": 85
+      },
+      {
+        "skill": "JS",
+        "procent": 60
+      },
+      {
+        "skill": "jQuery",
+        "procent": 50
+      }
+    ],
+    "skills_backend": [
+      {
+        "skill": "PHP",
+        "procent": 90
+      },
+      {
+        "skill": "MySql",
+        "procent": 70
+      }
+    ],
+    "skills_workflow": [
+      {
+        "skill": "Git",
+        "procent": 50
+      },
+      {
+        "skill": "Gulp",
+        "procent": 90
+      },
+      {
+        "skill": "Bower",
+        "procent": 40
+      },
+      {
+        "skill": "WebPack",
+        "procent": 10
+      }
     ]
   }
 }

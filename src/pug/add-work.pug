@@ -1,0 +1,31 @@
+extends ./layouts/main.pug
+
+block variables
+	- var title = 'Работы (Гость)'
+	- var pageClass = 'edit-work'
+
+block header	
+	include ./modules/nav-admin.pug
+	include ./modules/header-admin.pug
+block content
+	.container
+		div(class="row justify-content-md-center")
+			div(class="col-md-10")
+				div(class="title1 work-add-admin")
+					| Добавить работу
+				section(class="add-post add-work")
+					div(class="add-post__title add-work__title") Название
+						+formTText('form-full-width','FullWidth','Введите название работы')
+					div(class="add-post__title add-work__title") Изображение
+					+btnUpload('Изображение jpg или png, размером больше чем 100х100 пикселей, и весом до 2Мб.','file',true)
+					div(class="add-post__title add-work__title") Содержание
+						textarea( class="form-message" name="Message" placeholder="Введите описание") Сделана верстка #{textMessage}
+					div(class="add-post__title add-work__title") Результат
+						textarea( class="form-message" name="Message" placeholder="Введите описание") #{textMessage}
+					div(class="add-post__title add-work__title") Технологии
+						textarea( class="form-message" name="Message" placeholder="Введите описание") #{textMessage}
+
+						+formTText('form-name','YourName','Введите имя') #{contant}
+						+formTText('form-name','YourName','Введите имя') #{contant}
+						+button('Сохранить','#','save')
+						+button('Отмена','#')
