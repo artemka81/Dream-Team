@@ -21,7 +21,7 @@
 
 @import "ui_comments";
 @import "json-template";
->>>>>>> develop:src/scss/main.scss
+
 
 
 
@@ -36,4 +36,6 @@
 /*all pages styles*/
 @import "home-page--guest";
 @import "add-post";
-@import 'contacts.scss';
+@import 'contacts-guest.scss';
+@import 'contacts-admin.scss';
+@import 'contacts-admin-edit.scss';

@@ -133,17 +133,21 @@ $textDecoration : underline;
     margin-right: 0px;
 }
 
-.form-download__btn{
-    width: 146px !important;
-    border-radius: 25px !important;
-    height: 40px !important;
-    // align-items: center !important;
+
+// Кнопка загрузки
+
+ .contacts-btn-mod{
+    width: 146px ;
+    border-radius: 25px ;
+    height: 40px ;
 }
 
-.form-download__container{
-    margin-bottom: 10px !important;
-    align-items: center !important;
+ .contacts-container-mod{
+    margin-bottom: 10px ;
+    align-items: center ;
 }
+
+// ---Кнопка
 
 .form_submit-button{
 
@@ -165,6 +169,3 @@ $textDecoration : underline;
     height: 500px;
 }
 
-.lorem{
-    display: none !important;
-}

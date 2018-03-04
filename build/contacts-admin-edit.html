@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+<head>
+  <meta charset="UTF-8"/>
+  <title></title><!--[if IE]>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/><![endif]-->
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <meta name="keywords" content=""/>
+  <meta name="description" content=""/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap-reboot.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/><!-- build:cssVendor css/vendor.css -->
+  <link rel="stylesheet" href="/libs/bootstrap-4-grid/grid.min.css"/><!-- endbuild -->
+<!-- build:cssCustom css/main.css -->
+  <link rel="stylesheet" href="/css/main.css"/><!-- endbuild -->
+<!--[if lt IE 9]>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
+</head>
+<body>
+  <div class="header-user">
+    <div class="header-user__content">
+      <div class="header-user__mobile-bar" id="navigation-toggle">
+        <div class="header-user__mobile-toggle">
+          <svg class="icon icon-nav nav-mod">
+            <use xlink:href="/img/sprite.svg#nav"></use>
+          </svg>
+        </div>
+        <div class="header-user__mobile-close">
+          <svg class="icon icon-close close-mod">
+            <use xlink:href="/img/sprite.svg#close"></use>
+          </svg>
+        </div>
+        <p>Открыть навигацию</p>
+      </div>
+      <div class="header-user__logo-brand">
+        <div class="header-user__logo"><a href="index.html">
+            <svg class="icon icon-plane plane-mod">
+              <use xlink:href="/img/sprite.svg#plane"></use>
+            </svg></a></div><a class="header-user__brand" href="index.html">
+          <div class="header-user__brandname">
+            <h1>Digital Lyfestyle</h1>
+          </div>
+          <div class="header-user__brand-desc">
+            <p>Сайт IT специалиста</p>
+          </div></a>
+      </div>
+      <div class="header-user__login" id="navigation-login">
+        <div class="header-user__login-box">
+          <div class="header-user__signup-form">
+            <form>
+              <button>Регистрация</button>
+            </form>
+          </div>
+          <div class="header-user__login-form">
+            <form>
+              <button>Вход</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="header-user__nav-box" id="navigation-menu">
+        <nav Class="header-user__nav">
+          <ul>
+            <li><a href="/">Главная</a></li>
+            <li><a href="/about.html">Обо мне</a></li>
+            <li><a href="/works.html">Работы</a></li>
+            <li><a href="/blog.html">Блог</a></li>
+            <li><a href="/contact.html">Контакты</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <main class="wrap-content">
+    <div class="main-content main-content--edit">
+      <div class="content-title"> 
+        <h1>Редактировать данные</h1>
+      </div>
+      <form class="form-edit" action="/" method="POST">
+        <div class="wrap-row">
+          <div class="row-inp">
+            <div class="edit-inp form-edit_wrap">Имя
+              <input class="form-name edit-input" type="text" name="name" placeholder="Введите имя"/><span class="error"></span>
+            </div>
+            <div class="form-edit_wrap">Фамилия
+              <input class="form-name edit-input" type="text" name="surname" placeholder="Введите фамилию"/><span class="error"></span>
+            </div>
+          </div>
+          <div class="row-inp">
+            <div class="edit-inp form-edit_wrap">Email
+              <input class="form-name edit-input" type="text" name="email" placeholder="Введите email"/><span class="error"></span>
+            </div>
+            <div class="form-edit_wrap">Skype
+              <input class="form-name edit-input" type="text" name="skype" placeholder="Введите skype"/><span class="error"></span>
+            </div>
+          </div>
+          <div class="row-inp">
+            <div class="row-wrap">
+              <div class="edit-inp form-edit_wrap"><span>Вконтакте</span>
+                <input class="form-name edit-input" type="text" name="vk" placeholder="Введите ссылку на профиль"/><span class="error"></span>
+              </div>
+              <div class="edit-inp form-edit_wrap fix-margin"><span>Facebook</span>
+                <input class="form-name edit-input" type="text" name="fb" placeholder="Введите ссылку на профиль"/><span class="error"></span>
+              </div>
+            </div>
+            <div class="row-wrap">
+              <div class="edit-inp form-edit_wrap"><span>GitHub</span>
+                <input class="form-name edit-input" type="text" name="git-hub" placeholder="Введите ссылку на профиль"/><span class="error"></span>
+              </div>
+              <div class="form-edit_wrap"><span>Twitter</span>
+                <input class="form-name edit-input" type="text" name="tw" placeholder="Введите ссылку на профиль"/><span class="error"></span>
+              </div>
+            </div>
+          </div>
+          <div class="row-inp">
+            <div class="edit-inp form-edit_wrap">Телефон
+              <input class="form-name edit-input" type="text" name="number" placeholder="Введите номер"/><span class="error"></span>
+            </div>
+            <div class="edit-inp form-edit_wrap fix-margin">Адрес
+              <input class="form-name edit-input" type="text" name="addres" placeholder="Введите адрес"/><span class="error"></span>
+            </div>
+          </div>
+        </div>
+        <div class="row-inp button-row"><a class="button button-save" href="#"> Сохранить </a><a class="button button-regular" href="#"> Отмена </a>
+        </div>
+      </form>
+    </div>
+  </main>
+  <div class="map-wrapp">
+    <div class="map-conteiner" id="map"></div>
+  </div><script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAIr67yxxPmnF-xb4JVokCVGgLbPtuqxiA&callback=initMap"></script>
+  <script src="./js/googleMap.js"></script>
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 col-sm">
+          <p class="footer-copy">© DreamTeam<br/>	Создано с <i class="fas fa-heart"> </i> в <a class="footer-link" href="http://webcademy.ru/" target="_blank">WebCademy.ru</a> в 2018 году</p>
+        </div>
+        <div class="col-md-3 col-sm">
+          <ul class="menu">
+            <li><a href="/">Главная</a></li>
+            <li><a href="/about.html">Обо мне</a></li>
+            <li><a href="/works.html">Работы</a></li>
+            <li><a href="/blog.html">Блог</a></li>
+            <li><a href="/contact.html">Контакты</a></li>
+          </ul>
+        </div>
+        <div class="col-md-5 col-sm">
+          <ul class="footer-icons">
+            <li><a href="https://vk.com"><i class="fab fa-vk"></i></a></li>
+            <li><a href="https://twitter.com/"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="https://www.youtube.com/"><i class="fab fa-youtube-square"></i></a></li>
+            <li><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer><!-- build:jsLibs js/libs.js -->
+  <script src="/libs/jquery/jquery.min.js"></script><!-- endbuild -->
+<!-- build:jsVendor js/vendor.js --><script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAIr67yxxPmnF-xb4JVokCVGgLbPtuqxiA&callback=initMap"></script>
+  <script src="./js/googleMap.js"></script><!-- endbuild -->
+<!-- build:jsNavigation js/navigation.js -->
+  <script src="/js/navigation.js"></script><!-- endbuild -->
+<!-- build:jsMain js/main.js -->
+  <script src="/js/main.js"></script><!-- endbuild -->
+  <script defer="defer" src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+</body>

@@ -1,9 +1,15 @@
 extends layouts/main.pug
 
+block header
+    include ./modules/nav-admin.pug
+    include modules/header-admin.pug
+
 block content
-    include header-user.pug
+    div.edit-contacts
+        +button('Редактировать','#','edit')
+        +button('Сообщение','#','contacts-edit-message')
     main.wrap-content
-        .main-content
+        .main-content.main-content--admin
             .contacts
                 h1.contacts-title Контакты
                 .contacts_info
@@ -34,15 +40,14 @@ block content
                 .input-error-message
                     +formTText('form-name form-name-fullScreen','email','Введите Email')
                 .input-error-message
-                    textarea( class="form-message" name="Message" placeholder="Сообщение")
+                    textarea( class="form-message mod_form-message--contacts-admin" name="Message" placeholder="Сообщение")
                 h5.form_btn-up-wrap  Прикрепить файл
-                +btnUpload('jpg, png, pdf, doc, весом до 2Мб.','file',true)
+                +btnUpload('jpg, png, pdf, doc, весом до 2Мб.','file',true, 'contacts-btn-mod','contacts-container-mod')
                 div.form_submit-button
                     +button('Отправить','#','save')
     .map-wrapp
         .map-conteiner#map
-    include footer.pug
     block scripts
         <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAIr67yxxPmnF-xb4JVokCVGgLbPtuqxiA&callback=initMap"></script>
         script(src="./js/googleMap.js")
-    
+
