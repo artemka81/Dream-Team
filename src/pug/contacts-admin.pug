@@ -1,0 +1,53 @@
+extends layouts/main.pug
+
+block header
+    include ./modules/nav-admin.pug
+    include modules/header-admin.pug
+
+block content
+    div.edit-contacts
+        +button('Редактировать','#','edit')
+        +button('Сообщение','#','contacts-edit-message')
+    main.wrap-content
+        .main-content.main-content--admin
+            .contacts
+                h1.contacts-title Контакты
+                .contacts_info
+                    .info.email Email
+                        .block
+                            span 
+                                a(href="#").info_email aspirin.kg@mail.ru
+                    .info.skype Skype
+                        .block
+                            span 
+                                a(href="#").info_skype aspirin.kg
+                    .info.social Социальные сети
+                        .social-info
+                            span.vk
+                                a(href="#") Профиль Вконтакте
+                            span.facebook 
+                                a(href="#") Профиль Facebook
+                    .info.number Телефон
+                        .block
+                            span.info_number +996708752647
+                    .info.addres Адрес
+                        .block
+                            span.info_addres Россия, Московская обл. г. Зеленоград
+            form.form(action="/" method="POST")
+                h1.contacts-title.contact-title-form Свяжитесь со мной
+                .input-error-message
+                    +formTText('form-name form-name-fullScreen','name','Введите имя')
+                .input-error-message
+                    +formTText('form-name form-name-fullScreen','email','Введите Email')
+                .input-error-message
+                    textarea( class="form-message mod_form-message--contacts-admin" name="Message" placeholder="Сообщение")
+                h5.form_btn-up-wrap  Прикрепить файл
+                +btnUpload('jpg, png, pdf, doc, весом до 2Мб.','file',true, 'contacts-btn-mod','contacts-container-mod')
+                div.form_submit-button
+                    +button('Отправить','#','save')
+    .map-wrapp
+        .map-conteiner#map
+    block scripts
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAIr67yxxPmnF-xb4JVokCVGgLbPtuqxiA&callback=initMap"></script>
+        script(src="./js/googleMap.js")
+

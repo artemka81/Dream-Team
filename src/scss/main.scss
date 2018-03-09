@@ -11,13 +11,25 @@
 @import "full-post";
 @import "nav-admin";
 @import 'helper.scss';
+
+@import "ui_button.scss";
+
+*{
+	box-sizing: border-box;
+}
+
+
 @import "ui_comments";
 @import "json-template";
 
 
 
+
 /* blocks styles */
 @import 'ui-forms.scss';
+
+
+
 @import 'login_and_sign-up';
 @import 'about';
 
@@ -26,4 +38,7 @@
 @import "home-page--guest";
 @import "work-page";
 @import "add-post";
+@import 'contacts-guest.scss';
+@import 'contacts-admin.scss';
+@import 'contacts-admin-edit.scss';
 @import  "form-validation.scss";

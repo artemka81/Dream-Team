@@ -8,20 +8,22 @@ mixin icon(name,mod)
 
 mixin formTText(className,name,pH,contant)
 	input(class=className type="text" name=name placeholder=pH)
-		
-mixin btnUpload(title,id,bbool)
+
+mixin btnUpload(title,id,bbool,btnMod,containerMod)
+	- btnMod = btnMod || ''
+	- containerMod = containerMod || ''
 	if bbool
 		.form-download
 			.form-download__title #{title}
-			.form-download__container 
-				label.form-download__btn Выбрать файл
+			.form-download__container(class=containerMod) 
+				label.form-download__btn(class=btnMod) Выбрать файл
 					input(type="file" id=id name="file" style="display:none")
 				input( class="form-download__file-name" id="value" type="text" value='Файл не выбран' disabled)
 	else
 		.form-download
 			.form-download__title #{title}
-			.form-download__container 
-				label.form-download__btn 
+			.form-download__container(class=containerMod) 
+				label.form-download__btn(class=btnModmod) 
 					span Выбрать файл
 					input(type="file" id=id name="file" style="display:none")
 				input( class="form-download__file-name" id="value" type="text" value='Файл не выбран' disabled)

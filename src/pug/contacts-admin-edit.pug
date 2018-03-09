@@ -1,0 +1,72 @@
+extends layouts/main.pug
+
+block header
+    include modules/header-guest.pug
+
+block content
+ 
+    main.wrap-content
+        .main-content.main-content--edit
+            .content-title 
+                h1 Редактировать данные
+            form(action="/" method="POST" class="form-edit")
+                .wrap-row
+                    .row-inp
+                        .edit-inp.form-edit_wrap
+                            | Имя
+                            +formTText('form-name edit-input','name','Введите имя')
+                            span.error
+                        .form-edit_wrap
+                            | Фамилия
+                            +formTText('form-name edit-input','surname','Введите фамилию')
+                            span.error
+                    .row-inp
+                        .edit-inp.form-edit_wrap
+                            | Email
+                            +formTText('form-name edit-input','email','Введите email')
+                            span.error
+                        .form-edit_wrap
+                            | Skype
+                            +formTText('form-name edit-input','skype','Введите skype')
+                            span.error
+                    .row-inp
+                        .row-wrap
+                            .edit-inp.form-edit_wrap
+                                span Вконтакте
+                                +formTText('form-name edit-input','vk','Введите ссылку на профиль')
+                                span.error
+                            .edit-inp.form-edit_wrap.fix-margin
+                                span Facebook
+                                +formTText('form-name edit-input','fb','Введите ссылку на профиль')
+                                span.error
+                        .row-wrap
+                            .edit-inp.form-edit_wrap
+                                span GitHub
+                                +formTText('form-name edit-input','git-hub','Введите ссылку на профиль')
+                                span.error
+                            .form-edit_wrap
+                                span Twitter
+                                +formTText('form-name edit-input','tw','Введите ссылку на профиль')
+                                span.error
+                    .row-inp
+                        .edit-inp.form-edit_wrap
+                            | Телефон
+                            +formTText('form-name edit-input','number','Введите номер')
+                            span.error
+                        .edit-inp.form-edit_wrap.fix-margin
+                            | Адрес
+                            +formTText('form-name edit-input','addres','Введите адрес')
+                            span.error
+                .row-inp.button-row
+                    +button('Сохранить','#','save')
+                    +button('Отмена','#')
+
+
+                    
+                
+    .map-wrapp
+        .map-conteiner#map
+    block scripts
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAIr67yxxPmnF-xb4JVokCVGgLbPtuqxiA&callback=initMap"></script>
+        script(src="./js/googleMap.js")
+    

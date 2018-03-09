@@ -34,14 +34,15 @@ block content
 				.header-user__nav-box(id="navigation-menu")
 					+header-menu("header-user__nav",menu)
 
-		br
-		br
-		br
-		p
-			| Каждое мобильное меню хорошо работает только по отдельности, здесь так как 2 блока с одинаковыми js настройками сработает только первое меню.
-		br
-		br
-		br
+	//- 	br
+	//- 	br
+	//- 	br
+	//- 	p
+	//- 		| Каждое мобильное меню хорошо работает только по отдельности, здесь так как 2 блока с одинаковыми js настройками сработает только первое меню.
+	//- 	br
+	//- 	br
+	//- 	br
+
 
 	//- .header-helper - don't use it
 	.header-helper
@@ -65,7 +66,7 @@ block content
 					.header-user__inner(id="navigation-login")
 						.header-user__inner-box
 								.header-user__inner-avatar
-									+avatar-user("/img/avatar-img/0001.jpg")
+									+avatar-user("user-content/avatar/0001.jpg")
 								.header-user__inner-content-box
 									.header-user__inner-name-desc
 										h2 Емельян Казаков
@@ -79,3 +80,5 @@ block content
 												+button('Выход','#','header-user__inner-btn')
 					.header-user__nav-box(id="navigation-menu")
 						+header-menu("header-user__nav header-user__nav--inner",menu)
+
+	

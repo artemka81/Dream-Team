@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Google Карта</title>
+	<link rel="stylesheet" href="css/main.css">
+
+
+</head>
+<body>
+
+<div class="other-section-1"></div>
+
+<!-- map-wrapper -->
+<section class="map-wrapper">
+	
+	<!-- 1. Создаем элемент внутри которого у нас будет отображаться карта Google Maps -->
+	<div id="map" class="map"></div>
+
+	<address class="contacts-block">
+		КОНТАКТЫ
+	</address>
+</section>
+<!-- // map-wrapper -->
+
+<div class="other-section-2"></div>
+
+
+<!-- 3. Подключаем библиотеку Google Maps Api, чтобы создать карту -->
+<!-- Атрибуты async и defer - позволяют загружать этот скрипт асинхронно, вместе с загрузкой всей страницы  -->
+<!-- В подключении библиотеки Google Maps Api в конце указан параметр callback, после  подключения и загрузки этого Api сработает функция initMap для отрисовки карты,  которую мы описали выше -->
+<!-- Get Api key https://developers.google.com/maps/documentation/javascript/get-api-key#key -->
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAIr67yxxPmnF-xb4JVokCVGgLbPtuqxiA&callback=initMap"></script>
+
+	
+<!-- Async используется для того, чтобы указать браузеру, что скрипт может быть выполнен асинхронно. -->
+<!-- Атрибут defer указывает браузеру, что скрипт должен быть выполнен после того, как HTML-документ будет полностью разобран. -->
+
+<!-- 4. Пишем скрипт который создаст и отобразит карту Google Maps на странице. -->
+<script src="js/main.js"></script>
+
+
+</body>
+</html>
