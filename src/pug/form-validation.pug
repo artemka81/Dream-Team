@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Валидация формы</title>
+	<link rel="stylesheet" href="css/main.css">
+	<script src="libs/jquery/jquery.js"></script>
+	<script src="js/form-validation.js"></script>
+</head>
+<body>
+
+
+
+<form 	id="form" action="php/send.php"  method="POST" class="contact_form"	novalidate >
+
+		<h2>Заполните заявку</h2>
+		<div class="subtitle">и мы свяжемся с вами</div>
+		
+		<div class="form__group">
+			<label for="f_name">Ваше имя</label>
+			<input type="text" id="f_name" name="name" placeholder="">
+		</div>
+		
+		<div class="form__group">
+			<label for="f_email">Ваш email</label>
+			<input type="email" id="f_email" name="email" placeholder="">
+		</div>
+
+		<div class="form__group">
+			<label for="f_message">Ваше сообщение</label>
+			<textarea name="message" id="f_message" cols="30" rows="10" style="margin-bottom: 20px; width: 100%;"></textarea>
+		</div>
+
+
+		<div class="form__group">
+			<label for="f_terms">
+				<input type="checkbox" id="f_terms" name="terms" placeholder="" data-fvalid="required">
+				| Надо согласиться с условиями работы
+			</label>
+		</div>
+
+
+		<div class="form__group">
+			<label for="f_no">
+				<input type="checkbox" id="f_no" name="simple">
+				|А это просто чекбокс
+			</label>
+		</div> 
+
+		<div class="form__group">
+			<label>
+				<input type="radio" name="radio-group" data-fvalid="required">
+				|Выбор 1
+			</label>
+			<label>
+				<input type="radio" name="radio-group" data-fvalid="required">
+				|Выбор 2
+			</label>
+			<label>
+				<input type="radio" name="radio-group" data-fvalid="required">
+				|Выбор 3
+			</label>
+		</div>
+
+
+		<div class="form__group">
+			<label>
+				<input type="radio" name="radio-simple">
+				|Необязательный 1
+			</label>
+			<label>
+				<input type="radio" name="radio-simple">
+				|Необязательный 2
+			</label>
+			<label>
+				<input type="radio" name="radio-simple">
+				|Необязательный 3
+			</label>
+		</div>
+
+
+
+		<div class="form__group">
+			<label>
+				<input type="file" name="file-photo" data-fvalid="required">
+				|Загрузите фото
+			</label>
+		</div>
+
+
+		<input type="submit" id='btnSubmit' value="Отправить заявку">
+		<br><br>
+		<button id="clear">Очистить форму</button>
+
+</form>
+
+
+</body>
+</html>
